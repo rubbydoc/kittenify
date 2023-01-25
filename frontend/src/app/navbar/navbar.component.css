@@ -2,6 +2,9 @@
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 
 
 /* Giving a background-color to the nav container. */
@@ -21,33 +24,33 @@ nav {
   padding-left: 10px;
   margin-top: 0px;
 }
+
 a {
   text-decoration: none;
   font-size: 20px;
+  font-family: 'Bree Serif', serif;
+  padding-left: 50px;
+  text-align: right;
 
 }
 
 ul {
-  background: darkorange;
+  background: #FBB454;
   list-style: none;
   margin: 0;
   padding-left: 0;
-  margin-top: -25px;
-
-
-
-
+  margin-top: -25px; 
 }
 
 li {
   color: #fff;
-
   float: left;
   padding: 1rem;
   position: relative;
   text-decoration: none;
   transition-duration: 0.5s;
 }
+
 
 li a {
   color: rgb(11, 10, 10);
@@ -56,10 +59,11 @@ li a {
 li:hover {
   background: #FFFBAC;
   cursor: pointer;
+  
 }
 
 ul li ul {
-  background: orange;
+  background: #FF9F29;
   visibility: hidden;
   opacity: 0;
   min-width: 300px;
@@ -91,10 +95,6 @@ ul li ul li {
  * by the amount of the width of the first tier.
 */
 
-#drop-1{
-  visibility: hidden;
-}
-
 
 /* Change ' +' in order to change the Dropdown symbol */
 /* li > a:after { content:  ' +'; }
@@ -124,6 +124,66 @@ li > a:only-child:after { content: ''; } */
 .home img{
   float: right;
   margin-top: 50px;
+}
+
+/* navbar css ends here */
+
+.container{
+  padding-top: 20px;
+  display: inline;
+}
+.preview{
+  float:right;
+  margin-right: 20px;
+  width: 40%;
+  height: 40%;
+  
+
+}
+.intro{
+  float: left;
+  margin-top: 260px;
+  margin-left:70px;
+  padding:10px 20px;
+  position:absolute;
+  font-family: 'Bree Serif', serif;
+  font-size: 25px;
+}
+.intro h1{
+  font-size: 55px;
+  font-family: 'Fredoka One', cursive;
+  margin-bottom: auto;
+}
+.intro #buttonlearnmore{
+  padding:15px 50px;
+  font-size: 20px;
+  margin-left:370px;
+  margin-top: 40px;
+  background-color: #EC994B;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.intro #buttonlearnmore:hover{
+  background-color: #FFD59E;
+
+}
+.intro #buttonlearnmore:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.first{
+  position: absolute;
+  margin-top: 890px;
+  right: 570px;
+  font-family: 'Fredoka One', cursive;
+  text-align: center;
+}
+#smallcat{
+  margin-top: -10px;
+  width:60px;
+  height:60px;
 }
 
 
