@@ -1,0 +1,133 @@
+/* CSS Document */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+
+/* Giving a background-color to the nav container. */
+nav {
+	margin-top:19px;
+	padding: 20px 35px;
+	background-color: #FBC252;
+  width:80%;
+  float:right;
+
+}
+
+.logo {
+  width:300px;
+  height:120px;
+  float:left;
+  padding-left: 10px;
+  margin-top: 0px;
+}
+a {
+  text-decoration: none;
+  font-size: 20px;
+
+}
+
+ul {
+  background: darkorange;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  margin-top: -25px;
+
+
+
+
+}
+
+li {
+  color: #fff;
+
+  float: left;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+li a {
+  color: rgb(11, 10, 10);
+}
+
+li:hover {
+  background: #FFFBAC;
+  cursor: pointer;
+}
+
+ul li ul {
+  background: orange;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 300px;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  display: none;
+
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}
+.downbutton{
+    width:20px;
+    height:10px;
+    padding-left: 5px;
+}
+/* Second, Third and more Tiers
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+
+#drop-1{
+  visibility: hidden;
+}
+
+
+/* Change ' +' in order to change the Dropdown symbol */
+/* li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; } */
+
+
+/* Media Queries
+--------------------------------------------- */
+
+@media all and (max-width : 768px) {
+
+
+
+}
+
+@media all and (max-width : 330px) {
+
+	nav ul li {
+		display:block;
+		width: 94%;
+	}
+
+}
+
+
+/* body css starts here */
+.home img{
+  float: right;
+  margin-top: 50px;
+}
+
+
+
+
+
+
