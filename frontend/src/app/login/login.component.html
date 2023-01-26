@@ -20,12 +20,16 @@
     </form>
   </div>
   <div class="form-container sign-in-container">
-    <form action="#">
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
       <h1>Welcome Back!</h1>
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
+      <div class="alert alert-danger mt-3" [hidden]="!error" >
+        {{error}}
+
+      </div>
+      <input type="email" placeholder="Email" name="email" [(ngModel)]="form.email" required/>
+      <input type="password" placeholder="Password" name="password" [(ngModel)]="form.password" required/>
       <a href="#">Forgot your password?</a>
-      <button>Sign In</button>
+      <button [disabled]="!loginForm.valid">Sign in</button>
     </form>
   </div>
   <div class="overlay-container">
@@ -45,7 +49,7 @@
         <h1> ^⇀ﻌ↼^ฅ</h1>
         <br>
 
-        <button class="ghost" id="signUp">Sign Up</button>
+        <button routerLink="/signup" class="ghost" id="signUp">Sign Up</button>
       </div>
     </div>
   </div>
