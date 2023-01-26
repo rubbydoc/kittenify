@@ -8,13 +8,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { LostnfoundComponent } from './lostnfound/lostnfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    LostnfoundComponent
   ],
   imports: [
     BrowserModule,

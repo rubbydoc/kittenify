@@ -1,7 +1,6 @@
 /* CSS Document */
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
 @import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
@@ -39,7 +38,7 @@ ul {
   list-style: none;
   margin: 0;
   padding-left: 0;
-  margin-top: -25px; 
+  margin-top: -25px;
 }
 
 li {
@@ -59,7 +58,7 @@ li a {
 li:hover {
   background: #FFFBAC;
   cursor: pointer;
-  
+
 }
 
 ul li ul {
@@ -121,6 +120,7 @@ li > a:only-child:after { content: ''; } */
 
 
 /* body css starts here */
+
 .home img{
   float: right;
   margin-top: 50px;
@@ -137,7 +137,7 @@ li > a:only-child:after { content: ''; } */
   margin-right: 20px;
   width: 40%;
   height: 40%;
-  
+
 
 }
 .intro{
@@ -173,20 +173,84 @@ li > a:only-child:after { content: ''; } */
   transform: translateY(4px);
 }
 
-.first{
+.containertwo{
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+.containertwo .first{
   position: absolute;
   margin-top: 890px;
-  right: 570px;
+  right: 700px;
   font-family: 'Fredoka One', cursive;
   text-align: center;
 }
-#smallcat{
+.containertwo .first h4{
+  color:#EC994B;
+}
+.containertwo #smallcat{
   margin-top: -10px;
   width:60px;
   height:60px;
 }
-
-
+.containertwo .second{
+  position: absolute;
+  margin-top: 1150px;
+  right: 150px;
+  font-family: 'Fredoka One', cursive;
+}
+.containertwo .third{
+  position: absolute;
+  margin-top: 1340px;
+  right: 100px;
+  font-family: 'Fredoka One', cursive;
+}
+.containertwo .fourth{
+  position: absolute;
+  margin-top: 1550px;
+  right: 250px;
+  font-family: 'Fredoka One', cursive;
+}
+/* .containertwo .fifth{
+  position: absolute;
+  margin-top: 1600px;
+  right: 250px;
+  font-family: 'Fredoka One', cursive;
+} */
+.containertwo .sixth{
+  position: absolute;
+  margin-top: 1150px;
+  left: 200px;
+  font-family: 'Fredoka One', cursive;
+  text-align: right;
+}
+.containertwo .seventh{
+  position: absolute;
+  margin-top: 1340px;
+  left: 150px;
+  font-family: 'Fredoka One', cursive;
+  text-align: right;
+}
+.containertwo .eightth{
+  position: absolute;
+  margin-top: 1550px;
+  left: 150px;
+  font-family: 'Fredoka One', cursive;
+  text-align: right;
+}
+/* .containertwo .nineth{
+  position: absolute;
+  margin-top: 1600px;
+  left: 250px;
+  font-family: 'Fredoka One', cursive;
+  text-align: right;
+} */
+.containertwo h5{
+  font-size: 15px;
+}
+.containertwo .featlogo{
+  width:50px;
+  height:50px;
+}
 
 
 

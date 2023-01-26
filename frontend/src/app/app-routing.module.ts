@@ -2,6 +2,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { AppComponent } from './app.component';
+import { LostnfoundComponent } from './lostnfound/lostnfound.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -22,6 +23,14 @@ const routes: Routes = [
   {
     path: 'signup',
     component: SignUpComponent
+  },
+  {
+    path: 'app',
+    component: AppComponent
+  },
+  {
+    path: 'lostnfound',
+    component: LostnfoundComponent
   }
 ];
 
