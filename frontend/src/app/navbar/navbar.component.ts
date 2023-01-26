@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../Services/auth.service';
 
 
 @Component({
@@ -7,6 +8,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+
+  // public loggedIn?:boolean;
+
+  // constructor(private Auth:AuthService) {
+
+  // }
+
+
+
+  // ngOnInit() {
+  //   this.Auth.authStatus.subscribe(value=>this.loggedIn=value);
+  // }
 
 
 }
