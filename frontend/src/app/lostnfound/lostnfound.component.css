@@ -19,33 +19,192 @@ nav {
 .logo {
   width:300px;
   height:120px;
-  float:left;
-  padding-left: 10px;
-  margin-top: 0px;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
 }
-.navtwo {
-	position:absolute;
-   top:130px;
-   right:0;
-   background-color: #FBC252;
-   padding: 20px 35px;
-   width:80%;
-   height:80px;
-}
-.navtwo .buttons{
+nav .buttons{
+  float:right;
   
 }
 
+nav button{
+  margin-left: 50px;
+  font-family: 'Bree Serif', serif;
+  font-size: 20px;
+  padding: 15px 80px;
+  margin-top: -8px; 
+  background-color: #434242;
+  color:azure;
+  border-style:solid;
+  border-color: #FFFBAC;
+  border-width: 5px;
+}
+nav button:hover{
+  background-color: #FFFBAC;
+  border-style:solid;
+  border-color: #434242;
+  border-width: 5px;
+  color:black;
+}
 
+.container{
+  padding-top: 200px;
+  display: inline;
+  
+}
+.preview{
+  position: relative;
+  float:right;
+  margin-right: 50px;
+  width: 45%;
+  height: 40%;
+  top:250px;
+
+
+}
+.intro{
+  float: left;
+  margin-top: 250px;
+  margin-left:50px;
+  padding:10px 20px;
+  position:absolute;
+  font-family: 'Bree Serif', serif;
+  font-size: 20px;
+}
+.intro h1{
+  font-size: 55px;
+  font-family: 'Fredoka One', cursive;
+  margin-bottom: auto;
+}
+.intro #buttonlearnmore{
+  padding:15px 50px;
+  font-size: 20px;
+  margin-left:70px;
+  margin-top: 40px;
+  background-color: #EC994B;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.intro #buttonlearnmore:hover{
+  background-color: #FFD59E;
+
+}
+.intro #buttonlearnmore:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.intro #buttonfound{
+  padding:15px 40px;
+  font-size: 20px;
+  margin-left:70px;
+  margin-top: 40px;
+  background-color: #EC994B;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.intro #buttonfound img{
+  width: 80px;
+}
+.intro #buttonfound:hover{
+  background-color: #FFD59E;
+
+}
+.intro #buttonfound:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 
 
 
 .wall{
-  position: absolute;
-    top: 50%;
-    left: 500px;
-    margin-top: -50px;
-    margin-left: -50px;
-    width: 1000px;
-    height: 1000px;
+  position: relative;
+  margin-top: 900px;
+  margin-left: 200px;
+}
+.containertwo {
+  width: 90%;
+}
+.containertwo h1{
+  margin-bottom: 30px;
+  font-family: 'Fredoka One', cursive;
+}
+.heading {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-flow:wrap;
+}
+.row .card img{
+  width:250px;
+  height:250px;
+  margin: -50px;
+
+  /* margin-bottom: -30px; */
+}
+
+.card {
+  width: 320px;
+  background: #fff;
+  border: 1px solid #ccc;
+  margin-bottom: 50px;
+  transition: 0.3s;
+}
+
+.card-header {
+  text-align: center;
+  padding: 70px 10px;
+  background: #FBC252;
+  color: #434242;
+}
+
+.card-body {
+  padding: 20px 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.card-body .btn {
+  display: block;
+  color: #fff;
+  text-align: center;
+  background:#EC994B;
+  margin-top: 30px;
+  text-decoration: none;
+  padding: 10px 5px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 1000px) {
+  .card {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .container {
+    width: 100%;
+  }
+
+  .heading {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  .card {
+    width: 80%;
+  }
 }
