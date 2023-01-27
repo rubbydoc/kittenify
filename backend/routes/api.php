@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CatBreedController;
+use App\Http\Controllers\CatController;
 use App\Http\Controllers\PhysicalAttributeController;
 use App\Models\CatBreed;
 
@@ -17,5 +18,7 @@ Route::controller(AuthController::class)->group(function () {
 
 Route::apiResource('cat-breeds', CatBreedController::class);
 Route::apiResource('physical-attributes', PhysicalAttributeController::class);
+Route::apiResource('cats', CatController::class);
+
 
 
