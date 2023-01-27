@@ -26,22 +26,22 @@ nav {
 }
 nav .buttons{
   float:right;
-  
+
 }
 
-nav button{
+nav label{
   margin-left: 50px;
   font-family: 'Bree Serif', serif;
   font-size: 20px;
   padding: 15px 80px;
-  margin-top: -8px; 
+  margin-top: -8px;
   background-color: #434242;
   color:azure;
   border-style:solid;
   border-color: #FFFBAC;
   border-width: 5px;
 }
-nav button:hover{
+nav label:hover{
   background-color: #FFFBAC;
   border-style:solid;
   border-color: #434242;
@@ -50,23 +50,22 @@ nav button:hover{
 }
 
 .container{
-  padding-top: 200px;
+  padding-top: 20px;
   display: inline;
-  
+
 }
 .preview{
-  position: relative;
+  position: flex;
   float:right;
   margin-right: 50px;
   width: 45%;
   height: 40%;
-  top:250px;
-
+  margin-top: -600px;
 
 }
 .intro{
   float: left;
-  margin-top: 250px;
+  margin-top: -600px;
   margin-left:50px;
   padding:10px 20px;
   position:absolute;
@@ -118,15 +117,16 @@ nav button:hover{
   transform: translateY(4px);
 }
 
-
-
 .wall{
-  position: relative;
+  position: flex;
   margin-top: 900px;
   margin-left: 200px;
 }
 .containertwo {
   width: 90%;
+  margin-left: auto;
+  margin-right: 200px;
+  padding-top: 100px;
 }
 .containertwo h1{
   margin-bottom: 30px;
@@ -207,4 +207,116 @@ nav button:hover{
   .card {
     width: 80%;
   }
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+  text-decoration: none;
+  list-style: none
+}
+
+#chkBox{
+  display: none;
+}
+#chkBox1{
+  display: none;
+}
+.mainContnt{
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.7s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  background: rgba(0,0,0,0.8);
+
+}
+.box{
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr); */
+  width: 50%;
+  height: 300px;
+  transform: translateY(-1000px);
+  transition: all 2s ease-in;
+  margin: auto;
+  background: #fff;
+}
+
+.bx2{
+  padding: 60px 50px 0 32px;
+}
+.bx2 h3 {
+margin-bottom: 16px;
+/* text-transform: uppercase; */
+font-family: 'Fredoka One', cursive;
+}
+.bx3{
+  padding: 60px 50px 0 32px;
+}
+.bx3 h3 {
+margin-bottom: 16px;
+/* text-transform: uppercase; */
+font-family: 'Fredoka One', cursive;
+}
+.login-form input {
+width: 100%;
+height: 52px;
+padding: 15px;
+margin-bottom: 25px;
+font-family: 'Fredoka One', cursive;
+}
+.login-form input[type="submit"] {
+background: #FFD59E;
+font-size: 25px;
+text-transform: uppercase;
+line-height: 20px;
+color: #434242;
+}
+.login-form input[type="submit"]:hover{
+  background-color: #EC994B;
+  color:#fff;
+
+}
+.login-form input[type="submit"] :active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* .close-box .box-close{
+  color: #434242;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  right: 16px;
+  font-size: 18px
+} */
+.box-close  {
+position: absolute;
+bottom: 225px;
+right: 5px;
+}
+#chkBox:checked + .mainContnt{
+  visibility: visible;
+  opacity: 1;
+}
+#chkBox1:checked + .mainContnt{
+  visibility: visible;
+  opacity: 1;
+}
+
+#chkBox:checked + .mainContnt .box{
+  transform: translateY(0);
+}
+#chkBox:checked + .mainContnt .box{
+  transform: translateY(0);
 }
