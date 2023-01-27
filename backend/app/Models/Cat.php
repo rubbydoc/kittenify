@@ -25,7 +25,7 @@ class Cat extends Model
         'good_with_kids',
         'purebred',
         'has_special_needs',
-        'need_experinced_adopter',
+        'need_experienced_adopter',
         'story',
         'diet',
         'image'

@@ -34,7 +34,7 @@ class CatController extends Controller
             'good_with_kids'=>$request->good_with_kids,
             'purebred'=>$request->purebred,
             'has_special_needs'=>$request->has_special_needs,
-            'need_experinced_adopter'=>$request->need_experienced_adopter,
+            'need_experienced_adopter'=>$request->need_experienced_adopter,
             'story'=>$request->story,
             'diet'=>$request->diet,
             'image'=>$image_path
