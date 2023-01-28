@@ -1,120 +1,72 @@
-let formnum = 0;
-var main_div= document.querySelectorAll(".main");
-var input_pass=document.querySelector("#passcode");
-var eye_pass=document.querySelector(".eyes");
 
-function updateform(){
-   
+  var current_fs, next_fs, previous_fs; //fieldsets
+  var opacity;
 
-    $('.main').each(function(index,item){
-        $(item).removeClass("active");
-    });
-    $(".main").eq(formnum).addClass('active');
-}
+  function nextForm(){
 
+      current_fs = $('.next').parent();
+      next_fs = $('.next').parent().next();
 
+      //Add Class Active
+      $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
 
-eye_pass.addEventListener('click',function(){
-   if(input_pass.type=="password"){
-       input_pass.type="text";
-       eye_pass.classList.remove('fa-eye-slash');
-       eye_pass.classList.add('fa-eye');
-      input_pass.classList.add('warning');
-   }
-   else{
-        input_pass.type="password";
-       eye_pass.classList.remove('fa-eye');
-       eye_pass.classList.add('fa-eye-slash');
-      input_pass.classList.remove('warning');
-   }
-}); 
+      //show the next fieldset
+      next_fs.show();
+      //hide the current fieldset with style
+      current_fs.animate({opacity: 0}, {
+          step: function(now) {
+              // for making fielset appear animation
+              opacity = 1 + now;
 
-var confirm_input_pass=document.querySelector("#confirm_passcode");
-var confirm_eye_pass=document.querySelector(".confirm_eyes");
+              current_fs.css({
+                  'display': 'none',
+                  'position': 'relative'
+              });
+              next_fs.css({'opacity': opacity,
 
-confirm_eye_pass.addEventListener('click',function(){
-   if(confirm_input_pass.type=="password"){
-       confirm_input_pass.type="text";
-       confirm_eye_pass.classList.remove('fa-eye-slash');
-       confirm_eye_pass.classList.add('fa-eye');
-      confirm_input_pass.classList.add('warning');
-   }
-   else{
-        confirm_input_pass.type="password";
-       confirm_eye_pass.classList.remove('fa-eye');
-       confirm_eye_pass.classList.add('fa-eye-slash');
-      confirm_input_pass.classList.remove('warning');
-   }
-});
-
-var next_button= document.querySelectorAll(".next-btn");
-var previous_button= document.querySelectorAll(".prev-btn");
-var submit_button= document.querySelectorAll(".submit");
+            });
+          },
+          duration: 600
+      });
+  }
 
 
 
+  function previousForm(){
 
-   function nextButton(){
-    
-    if(!validate_form()){
-      return false; 
-    } 
-    formnum++;
-    updateform();
+      current_fs = $('.previous').parent();
+      previous_fs = $('.previous').parent().prev();
 
-   }
-   
+      //Remove class active
+      $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
 
+      //show the previous fieldset
+      previous_fs.show();
 
-   
-   function prevButton(){
-    
-    formnum--;
-    updateform();
+      //hide the current fieldset with style
+      current_fs.animate({opacity: 0}, {
+          step: function(now) {
+              // for making fielset appear animation
+              opacity = 1 - now;
 
-   }
+              current_fs.css({
+                  'display': 'none',
+                  'position': 'relative'
+              });
+              previous_fs.css({'opacity': opacity,
+              'display': 'block',
+              'position': 'relative'});
+          },
+          duration: 600
+      });
+  }
 
+  $('.radio-group .radio').click(function(){
+      $(this).parent().find('.radio').removeClass('selected');
+      $(this).addClass('selected');
+  });
 
-   
-   
-submit_button.forEach(function(butn){
-     butn.addEventListener('click',function(){
-            if(!validate_form()) return false;
-         var f_name = document.getElementById("f_name");
-         var s_name = document.getElementById("s_name");
-          formnum++;
-          s_name.innerHTML = f_name.value;
-            updateform();
-     });
- });
+  $(".submit").click(function(){
+      return false;
+  })
 
-
-
-
-
-
-
-
-
-
-
-
-
-function validate_form(){
-    
-    var validate=true;
-    var inputs= document.querySelectorAll(".main.active input");
-    inputs.forEach(function(inpt){
-         inpt.classList.remove('warning');
-        if(inpt.hasAttribute("require")){
-            if(inpt.value.length==0){
-                validate=false;
-                inpt.classList.add('warning');
-            } 
-        }
-        
-    });
-
-    return validate;
-    
-}

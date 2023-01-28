@@ -54,6 +54,8 @@ class CatController extends Controller
 
     public function update(Request $request, $id)
     {
+        $image_path = $request->file('image')->store('image', 'public');
+
         return Cat::find($id)->update([
             'name'=>$request->name,
             'age'=>$request->age,
