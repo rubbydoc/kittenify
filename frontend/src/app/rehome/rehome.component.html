@@ -1,94 +1,254 @@
-<div class="container">
-  <div class="card">
-      <div class="main active">
-          <div class="image">
-              <span><img src="https://imgur.com/sNwSvzv.png"></span>
-          </div>
-          <div class="heading">
-              <h3>Create a Free Preview Account</h3>
-              <p>Already signed up?<a href="#"> Log in</a></p>
-          </div>
-          <div class="input-text">
-              <input type="text" placeholder="First Name" require="required" id="f_name">
-          </div>
-          <div class="input-text">
-              <input type="text" placeholder="Last Name"> 
-          </div>
-          <div class="input-text">
-              <input type="text" placeholder="Job Title" require="required">
-          </div>
-          <div class="button">
-              <button class="next-btn" (click)="next()">Next</button> 
-          </div>
+<main role="main">
+  <section class="jumbotron text-center">
+    <div class="logo">
+      <a routerLink="/home"
+        ><img class="logo" src="../assets/logo.png" alt=""
+      /></a>
+      <!-- <img class="logo" src="../assets/logo.png" alt=""> -->
+    </div>
+    <!--
+    <nav>
+      <div class="container">
+        <h1 class="jumbotron-heading">LOST 'N FOUND</h1>
+        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+
       </div>
-  
-      <div class="main">
-          <div class="image">
-              <span><img src="https://imgur.com/sNwSvzv.png"></span>
-          </div>
-          <div class="heading">
-              <h3>Create a Free Preview Account</h3>
-              <p>Already signed up?<a href="#"> Log in</a></p>
-          </div>
-          <div class="input-text">
-              <input type="text" placeholder="Company" require="required">
-          </div>
-          <div class="input-text">
-              <input type="text" placeholder="Phone" require="required">
-          </div>
-          <div class="input-text">
-              <input type="text" placeholder="Industry" require="required">
-          </div>
-          <div class="button">
-              <button class="prev-btn" (click)="previous()">Previous</button>
-              <button class="next-btn" (click)="next()">Next</button>
-          </div>
-      </div>
-      
-      <div class="main">
-          <div class="image">
-              <span><img src="https://imgur.com/sNwSvzv.png"></span>
-          </div>
-          <div class="heading">
-              <h3>Create a Free Preview Account</h3>
-              <p>Already signed up?<a href="#"> Log in</a></p>
-          </div>
-          <div class="input-text">
-              <input type="text" placeholder="E-mail" require="required">
-          </div>
-          <div class="input-text">
-              <input type="password" placeholder="Password" id="passcode" require="required">
-              <i class="fa fa-eye-slash eyes"></i>
-          </div>
-          <div class="input-text">
-              <input type="password" placeholder="Confirm password" id="confirm_passcode" require="required">
-              <i class="fa fa-eye-slash confirm_eyes"></i>
-          </div>
-          <div class="button">
-              <button class="prev-btn" (click)="previous()">Previous</button>
-              <button class="submit">Submit</button>
-            
-          </div>
-      </div>
-      <div class="main">
-          <div class="final-step">
-              <div class="check-sign">
-                  <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-                  <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
-                  <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
-                  </svg>
-                  
+    </nav> -->
+
+    <nav>
+      <div class="header">
+        <h1>REHOME</h1>
+        <div class="buttons">
+          <!-- <button type="button" class="btn" for="chkbox">I Found a Pet</button> -->
+          <!-- <label class="btn" for="chkBox">I Found a Pet</label>
+          <input type="checkbox" name="" id="chkBox" /> -->
+          <!-- <div class="mainContnt">
+            <div class="box">
+              <div class="boxes bx2">
+                <h3>Please Enter Found Location</h3>
+                <div class="login-form">
+                  <input
+                    type="text"
+                    placeholder="Enter City, State or Zip Code "
+                  />
+                  <input type="submit" value="submit" />
+                </div>
+                <div class="close-box">
+                  <label for="chkBox" class="box-close">X</label>
+                </div>
               </div>
-              <h3>Verify your E-mail Address</h3>
-              <p>Thanks Mr. <span id="s_name"></span> we have sent you a confirmation email,please click 
-              on the link to confirm your email address.</p>
+            </div> -->
+          <!-- </div> -->
+
+          <label class="btn" for="chkBox1">Rehome a Cat</label>
+          <input type="checkbox" name="" id="chkBox1" />
+          <div class="mainContnt">
+            <div class="box1">
+              <div class="boxes bx3">
+                <h3>Please Enter Pet Information</h3>
+                <div class="login-form" [formGroup]="form">
+                  <input type="text" placeholder="Name:" name="name" formControlName="name"/>
+                  <select class="form-select" aria-label="Default select example" name="gender" formControlName="gender">
+                    <option selected>Gender:</option>
+                    <option >Male</option>
+                    <option >Female</option>
+                    <option >Three</option>
+                  </select>
+                  <select class="form-select" aria-label="Default select example" name="age" formControlName="age">
+                    <option selected>Age:</option>
+                    <option >Kitten</option>
+                    <option>Young</option>
+                    <option>Adult</option>
+                    <option>Senior</option>
+
+                  </select>
+                  <select class="form-select" aria-label="Default select example" name="color" formControlName="color">
+                    <option selected>Color:</option>
+                    <option >Black</option>
+                    <option>Black and White</option>
+                    <option>Brown or Chocolate</option>
+                    <option>Calico</option>
+                    <option>Gray</option>
+                    <option>Orange</option>
+                    <option>Brown Tabby</option>
+                    <option>Silver Tabby</option>
+                    <option>Orange Tabby</option>
+                    <option>Tan or Fawn</option>
+                    <option>White</option>
+                    <option>Cream</option>
+                    <option>Spotted Tabby</option>
+                    <option>Tiger Striped</option>
+
+                  </select>
+                  <select class="form-select" aria-label="Default select example" name="hair_length" formControlName="hair_length">
+                    <option selected>Hair length:</option>
+                    <option>Hairless</option>
+                    <option>Short</option>
+                    <option>Medium</option>
+                    <option>Long</option>
+
+                  </select>
+                  <select class="form-select"  name="breed" formControlName="breed" aria-label="Default select example">
+                    <option selected>Breed:</option>
+                    <option>Abyssinian</option>
+                    <option>American bobtail</option>
+                    <option>American curl</option>
+                    <option>American shorthair
+                    </option>
+                    <option>American wirehair</option>
+                    <option>Balinese</option>
+                    <option>Bengal</option>
+                    <option>Birman</option>
+                    <option>Bombay</option>
+                    <option>British shorthair
+                    </option>
+                    <option>Burmese</option>
+                    <option>Calico</option>
+                    <option>Chartreux</option>
+                    <option>Colorpoint shorthair</option>
+                    <option>Cornish rex
+                    </option>
+                    <option>Cymric</option>
+                    <option>Devon rex</option>
+                    <option>Domestic longhair</option>
+                    <option>Domestic mediumhair</option>
+                    <option>Domestic shorthair</option>
+                    <option>Egyptian mau
+                    </option>
+                    <option>European burmese</option>
+                    <option>Exotic</option>
+                    <option>Havana brown
+                    </option>
+                    <option>Himalayan</option>
+                    <option>Japanese bobtail</option>
+                    <option>Javanese</option>
+                    <option>Korat</option>
+                    <option>LaPerm</option>
+                    <option>Maine Coon</option>
+                    <option>Manx</option>
+                    <option>Munchkin</option>
+                    <option>Norwegian forest cat</option>
+
+
+
+                  </select>
+                  <input
+                    type="text"
+                    placeholder="Pet's Location  : Enter City, State or Zip Code" name="location" formControlName="location"
+                  />
+                  <select class="form-select" aria-label="Default select example" name="spayed" formControlName="spayed">
+                    <option selected>Is your cat spayed or neutered?:</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                  <select class="form-select" aria-label="Default select example" name="reason" formControlName="reason">
+                    <option selected>Why do you need to rehome your cat?:</option>
+                    <option>Behavioral issues</option>
+                    <option>Busy schedule</option>
+                    <option>Does not get along with another pet</option>
+                    <option>Fostered</option>
+                    <option>Found or abandoned</option>
+                    <option>Human health issues (e.g allergies, sickness)</option>
+                    <option>Infant, young children or pregnancy</option>
+                    <option>Landlord permission issues</option>
+                    <option>Ongoing costs</option>
+                    <option>Pet medical expenses (e.g vet procedure)</option>
+                    <option>Relocating</option>
+                  </select>
+
+                  <select class="form-select" aria-label="Default select example" name="shots_upto_date" formControlName="shots_upto_date">
+                    <option selected>Shots up up date?</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>Unknown</option>
+
+                  </select>
+
+                  <div class="form-group">
+                    <h5>Cat's Story</h5>
+                    <p>Share anything here about your cat.</p>
+
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="story" formControlName="story"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <h5>Cat's Diet</h5>
+                    <p>To better ensure your pet’s diet is maintained with the new pet owner, please tell us what brand  and type of food they eat.</p>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="diet" formControlName="diet"></textarea>
+                  </div>
+
+                  <div style="text-align: center">
+                    <p>Upload photo</p>
+                    <div [innerHtml]="msg" *ngIf="msg" style="color: red"></div>
+                    <div><img id="imgupload" [src]="url" *ngIf="url" /></div>
+                    <!-- <p>
+                      <input type="file" (change)="selectFile($event)" name="image" [(ngModel)]="form.image"/>
+                    </p> -->
+                    <input type="file" (change)="uploadFile($event)">
+                  </div>
+
+                  <input type="submit" value="submit" (click)="onCreate()"/>
+                </div>
+                <div class="close-box">
+                  <label for="chkBox1" class="box-close1">X</label>
+                </div>
+              </div>
+            </div>
           </div>
-          
-      </div>    
-      
-      
-      
-      
-      
+
+          <a routerLink="/home"
+            ><label class="btn" for="chkBox">Back to Home</label></a
+          >
+          <input type="checkbox" name="" id="chkBox" />
+          <div class="mainContnt">
+            <div class="box">
+              <div class="boxes bx1"></div>
+              <div class="boxes bx2">
+                <h3>Contact Us</h3>
+                <div class="login-form">
+                  <input type="text" placeholder="Enter Your Email.." />
+                  <input type="password" placeholder="Enter Your Password.." />
+                  <input type="submit" value="submit" />
+                </div>
+                <div class="close-box">
+                  <label for="chkBox" class="box-close">X</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <div class="container">
+    <img class="preview" src="../assets/cat.jpg" alt="" />
+
+    <div class="intro">
+      <h1>
+       Find your pet a loving forever <br> home
+      </h1>
+      <p>
+        Are you looking for a new home for your pet? If so, you're in the right
+        place! <br> We are here to help you safely find a loving forever home for
+        your pet. <br> All you need to do is to set up your pet's profile in less
+        than 10 mins. <br> Once complete, your pet's profile will be posted and be seen by millions <br> of visitors each month!
+      </p>
+      <button id="buttonlearnmore" class="btn" for="chkBox1">
+        <!-- <img src="../assets/lost.png" alt="" /> <br /> -->
+        Get Started
+      </button>
+
+      <!-- <button id="buttonfound">
+        <img src="../assets/paw.png" alt="" /> <br />
+        Found a Pet
+      </button> -->
+    </div>
   </div>
-</div>
+
+  <div class="wall">
+
+  </div>
+
+
+</main>
+

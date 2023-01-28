@@ -28,16 +28,9 @@ class CatController extends Controller
             'location'=>$request->location,
             'breed'=>$request->breed,
             'shots_upto_date'=>$request->shots_upto_date,
-            'house_trained'=>$request->house_trained,
-            'good_with_dogs'=>$request->good_with_dogs,
-            'good_with_cats'=>$request->good_with_cats,
-            'good_with_kids'=>$request->good_with_kids,
-            'purebred'=>$request->purebred,
-            'has_special_needs'=>$request->has_special_needs,
-            'need_experienced_adopter'=>$request->need_experienced_adopter,
             'story'=>$request->story,
             'diet'=>$request->diet,
-            'image'=>$image_path
+            'image'=>$request->$image_path
         ]);
 
 
@@ -54,6 +47,8 @@ class CatController extends Controller
 
     public function update(Request $request, $id)
     {
+        $image_path = $request->file('image')->store('image', 'public');
+
         return Cat::find($id)->update([
             'name'=>$request->name,
             'age'=>$request->age,
@@ -65,13 +60,6 @@ class CatController extends Controller
             'location'=>$request->location,
             'breed'=>$request->breed,
             'shots_upto_date'=>$request->shots_upto_date,
-            'house_trained'=>$request->house_trained,
-            'good_with_dogs'=>$request->good_with_dogs,
-            'good_with_cats'=>$request->good_with_cats,
-            'good_with_kids'=>$request->good_with_kids,
-            'purebred'=>$request->purebred,
-            'has_special_needs'=>$request->has_special_needs,
-            'need_experinced_adopter'=>$request->need_experienced_adopter,
             'story'=>$request->story,
             'diet'=>$request->diet,
             'image'=>$image_path

@@ -19,13 +19,6 @@ class Cat extends Model
         'location',
         'breed',
         'shots_upto_date',
-        'house_trained',
-        'good_with_dogs',
-        'good_with_cats',
-        'good_with_kids',
-        'purebred',
-        'has_special_needs',
-        'need_experienced_adopter',
         'story',
         'diet',
         'image'

@@ -9,10 +9,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { LostnfoundComponent } from './lostnfound/lostnfound.component';
-import { CatproductsComponent } from './catproducts/catproducts.component';
 import { FormsModule } from '@angular/forms';
 import { CatBreedComponent } from './cat-breed/cat-breed.component';
+import { CatproductsComponent } from './catproducts/catproducts.component';
+import { HeaderComponent } from './header/header.component';
 import { RehomeComponent } from './rehome/rehome.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,15 +24,17 @@ import { RehomeComponent } from './rehome/rehome.component';
     SignUpComponent,
     LostnfoundComponent,
     CatBreedComponent,
-    RehomeComponent,
-    CatproductsComponent
+    CatproductsComponent,
+    HeaderComponent,
+    RehomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
 
   ],
   providers: [],
