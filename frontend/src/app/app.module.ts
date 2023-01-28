@@ -11,6 +11,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { LostnfoundComponent } from './lostnfound/lostnfound.component';
 import { FormsModule } from '@angular/forms';
 import { CatBreedComponent } from './cat-breed/cat-breed.component';
+import { CatproductsComponent } from './catproducts/catproducts.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { CatBreedComponent } from './cat-breed/cat-breed.component';
     LoginComponent,
     SignUpComponent,
     LostnfoundComponent,
-    CatBreedComponent
+    CatBreedComponent,
+    CatproductsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

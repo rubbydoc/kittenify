@@ -77,8 +77,13 @@ nav label:hover{
   font-family: 'Fredoka One', cursive;
   margin-bottom: auto;
 }
+
+.intro p{
+  font-size: 25px;
+}
 .intro #buttonlearnmore{
   padding:15px 50px;
+  font-family: 'Fredoka One', cursive;
   font-size: 20px;
   margin-left:70px;
   margin-top: 40px;
@@ -98,6 +103,7 @@ nav label:hover{
 .intro #buttonfound{
   padding:15px 40px;
   font-size: 20px;
+  font-family: 'Fredoka One', cursive;
   margin-left:70px;
   margin-top: 40px;
   background-color: #EC994B;
@@ -254,6 +260,17 @@ nav label:hover{
 .bx2{
   padding: 60px 50px 0 32px;
 }
+.box1{
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr); */
+  width: 50%;
+  height: 700px;
+  transform: translateY(-1000px);
+  transition: all 1s ease-in;
+  margin: auto;
+  background: #fff;
+  margin-top:30px;
+}
 .bx2 h3 {
 margin-bottom: 16px;
 font-family: 'Fredoka One', cursive;
@@ -271,6 +288,13 @@ height: 52px;
 padding: 15px;
 margin-bottom: 25px;
 font-family: 'Fredoka One', cursive;
+}
+.login-form #imgupload {
+  width:200px;
+  height: 175px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
 }
 .login-form input[type="submit"] {
 background: #FFD59E;
@@ -302,6 +326,11 @@ position: absolute;
 bottom: 225px;
 right: 5px;
 }
+.box-close1  {
+position: absolute;
+top:10px;
+right: 5px;
+}
 #chkBox:checked + .mainContnt{
   visibility: visible;
   opacity: 1;
@@ -314,12 +343,21 @@ right: 5px;
 #chkBox:checked + .mainContnt .box{
   transform: translateY(0);
 }
-#chkBox1:checked + .mainContnt .box{
+#chkBox1:checked + .mainContnt .box1{
   transform: translateY(0);
 }
-canvas {
-  height: 175px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
+/* .nextcontainer .first{
+  position: absolute;
+  margin-top: 90px;
+  right: 700px;
+  font-family: 'Fredoka One', cursive;
+  text-align: center;
 }
+.nextcontainer .first h4{
+  color:#EC994B;
+}
+.nextcontainer #smallcat{
+  margin-top: -10px;
+  width:60px;
+  height:60px;
+} */

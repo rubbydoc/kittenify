@@ -3,7 +3,8 @@
 
   <section class="jumbotron text-center">
     <div class="logo">
-      <img class="logo" src="../assets/logo.png" alt="">
+      <a routerLink="/home"><img class="logo" src="../assets/logo.png" alt=""></a>
+      <!-- <img class="logo" src="../assets/logo.png" alt=""> -->
     </div>
 <!--
     <nav>
@@ -40,27 +41,35 @@
             <label class="btn" for="chkBox1">I Lost a Pet</label>
             <input type="checkbox" name="" id="chkBox1">
             <div class="mainContnt">
-              <div class="box">
+              <div class="box1">
                   <div class="boxes bx3">
-                      <h3>Please Enter Lost Location</h3>
+                      <h3>Please Enter Lost Location and Pet Information</h3>
                       <div class="login-form">
-                          <input type="text" placeholder="Enter City, State or Zip Code ">
-                          <!-- <input type="password" placeholder="Enter Your Password.."> -->
-                          <input type="submit" value="submit">
-                          <canvas id= "canv1" ></canvas>
-                          <p>Filename:
-                          <input type="file" multiple="false" accept="image/*" id=finput onchange="upload()">
-                          </p>
 
+                          <input type="text" placeholder="Name:">
+                          <input type="text" placeholder="Gender:">
+                          <input type="text" placeholder="Date Lost:">
+                          <input type="text" placeholder="Place Lost  : Enter City, State or Zip Code">
+
+
+                          <div style="text-align:center">
+                            <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
+                            <div><img id="imgupload" [src]="url" *ngIf="url"></div>
+                            <p>
+                              <input type="file" (change)="selectFile($event)">
+                            </p>
+                          </div>
+
+                          <input type="submit" value="submit">
                       </div>
                       <div class="close-box">
-                          <label for="chkBox1" class="box-close">X</label>
+                          <label for="chkBox1" class="box-close1">X</label>
                       </div>
                   </div>
               </div>
           </div>
 
-          <label class="btn" for="chkBox">Help Lost Pets</label>
+          <a routerLink="/home"><label class="btn" for="chkBox">Back to Home</label></a>
             <input type="checkbox" name="" id="chkBox">
             <div class="mainContnt">
                 <div class="box">
@@ -159,8 +168,14 @@
 
 </div>
 
-
-
+<!-- <div class="nextcontainer">
+  <div class="first">
+    <h4>Welcome!</h4>
+    <h1>WHAT WE OFFER</h1>
+    <img id="smallcat" src="../assets/fat-cat.png" alt="">
+    <p>Who safeguarded who?<br>Sometimes the littlest things take up the most room in your heart.</p>
+  </div>
+</div> -->
 
 </main>
 

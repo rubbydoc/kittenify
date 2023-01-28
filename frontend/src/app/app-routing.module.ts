@@ -4,6 +4,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { AppComponent } from './app.component';
 import { LostnfoundComponent } from './lostnfound/lostnfound.component';
+import { CatproductsComponent } from './catproducts/catproducts.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -15,7 +16,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: '',
+    path: 'home',
     component: NavbarComponent
   },
   {
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'cat-breeds',
     component: CatBreedComponent
+  },
+  {
+    path: 'catproducts',
+    component: CatproductsComponent
   }
 ];
 
