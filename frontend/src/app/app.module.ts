@@ -14,6 +14,7 @@ import { CatBreedComponent } from './cat-breed/cat-breed.component';
 import { CatproductsComponent } from './catproducts/catproducts.component';
 import { HeaderComponent } from './header/header.component';
 import { RehomeComponent } from './rehome/rehome.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { RehomeComponent } from './rehome/rehome.component';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

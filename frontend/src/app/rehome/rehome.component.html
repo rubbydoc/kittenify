@@ -46,121 +46,121 @@
             <div class="box1">
               <div class="boxes bx3">
                 <h3>Please Enter Pet Information</h3>
-                <div class="login-form">
-                  <input type="text" placeholder="Name:" />
-                  <select class="form-select" aria-label="Default select example">
+                <div class="login-form" [formGroup]="form">
+                  <input type="text" placeholder="Name:" name="name" formControlName="name"/>
+                  <select class="form-select" aria-label="Default select example" name="gender" formControlName="gender">
                     <option selected>Gender:</option>
-                    <option value="1">Male</option>
-                    <option value="2">Female</option>
-                    <option value="3">Three</option>
+                    <option >Male</option>
+                    <option >Female</option>
+                    <option >Three</option>
                   </select>
-                  <select class="form-select" aria-label="Default select example">
+                  <select class="form-select" aria-label="Default select example" name="age" formControlName="age">
                     <option selected>Age:</option>
-                    <option value="1">Kitten</option>
-                    <option value="2">Young</option>
-                    <option value="3">Adult</option>
-                    <option value="3">Senior</option>
+                    <option >Kitten</option>
+                    <option>Young</option>
+                    <option>Adult</option>
+                    <option>Senior</option>
 
                   </select>
-                  <select class="form-select" aria-label="Default select example">
+                  <select class="form-select" aria-label="Default select example" name="color" formControlName="color">
                     <option selected>Color:</option>
-                    <option value="1">Black</option>
-                    <option value="2">Black and White</option>
-                    <option value="3">Brown or Chocolate</option>
-                    <option value="3">Calico</option>
-                    <option value="3">Gray</option>
-                    <option value="3">Orange</option>
-                    <option value="3">Brown Tabby</option>
-                    <option value="3">Silver Tabby</option>
-                    <option value="3">Orange Tabby</option>
-                    <option value="3">Tan or Fawn</option>
-                    <option value="3">White</option>
-                    <option value="3">Cream</option>
-                    <option value="3">Spotted Tabby</option>
-                    <option value="3">Tiger Striped</option>
+                    <option >Black</option>
+                    <option>Black and White</option>
+                    <option>Brown or Chocolate</option>
+                    <option>Calico</option>
+                    <option>Gray</option>
+                    <option>Orange</option>
+                    <option>Brown Tabby</option>
+                    <option>Silver Tabby</option>
+                    <option>Orange Tabby</option>
+                    <option>Tan or Fawn</option>
+                    <option>White</option>
+                    <option>Cream</option>
+                    <option>Spotted Tabby</option>
+                    <option>Tiger Striped</option>
 
                   </select>
-                  <select class="form-select" aria-label="Default select example">
+                  <select class="form-select" aria-label="Default select example" name="hair_length" formControlName="hair_length">
                     <option selected>Hair length:</option>
-                    <option value="1">Hairless</option>
-                    <option value="2">Short</option>
-                    <option value="3">Medium</option>
-                    <option value="3">Long</option>
+                    <option>Hairless</option>
+                    <option>Short</option>
+                    <option>Medium</option>
+                    <option>Long</option>
 
                   </select>
-                  <select class="form-select" aria-label="Default select example">
+                  <select class="form-select"  name="breed" formControlName="breed" aria-label="Default select example">
                     <option selected>Breed:</option>
-                    <option value="1">Abyssinian</option>
-                    <option value="2">American bobtail</option>
-                    <option value="3">American curl</option>
-                    <option value="3">American shorthair
+                    <option>Abyssinian</option>
+                    <option>American bobtail</option>
+                    <option>American curl</option>
+                    <option>American shorthair
                     </option>
-                    <option value="3">American wirehair</option>
-                    <option value="3">Balinese</option>
-                    <option value="3">Bengal</option>
-                    <option value="3">Birman</option>
-                    <option value="3">Bombay</option>
-                    <option value="3">British shorthair
+                    <option>American wirehair</option>
+                    <option>Balinese</option>
+                    <option>Bengal</option>
+                    <option>Birman</option>
+                    <option>Bombay</option>
+                    <option>British shorthair
                     </option>
-                    <option value="3">Burmese</option>
-                    <option value="3">Calico</option>
-                    <option value="3">Chartreux</option>
-                    <option value="3">Colorpoint shorthair</option>
-                    <option value="3">Cornish rex
+                    <option>Burmese</option>
+                    <option>Calico</option>
+                    <option>Chartreux</option>
+                    <option>Colorpoint shorthair</option>
+                    <option>Cornish rex
                     </option>
-                    <option value="3">Cymric</option>
-                    <option value="3">Devon rex</option>
-                    <option value="3">Domestic longhair</option>
-                    <option value="3">Domestic mediumhair</option>
-                    <option value="3">Domestic shorthair</option>
-                    <option value="3">Egyptian mau
+                    <option>Cymric</option>
+                    <option>Devon rex</option>
+                    <option>Domestic longhair</option>
+                    <option>Domestic mediumhair</option>
+                    <option>Domestic shorthair</option>
+                    <option>Egyptian mau
                     </option>
-                    <option value="3">European burmese</option>
-                    <option value="3">Exotic</option>
-                    <option value="3">Havana brown
+                    <option>European burmese</option>
+                    <option>Exotic</option>
+                    <option>Havana brown
                     </option>
-                    <option value="3">Himalayan</option>
-                    <option value="3">Japanese bobtail</option>
-                    <option value="3">Javanese</option>
-                    <option value="3">Korat</option>
-                    <option value="3">LaPerm</option>
-                    <option value="3">Maine Coon</option>
-                    <option value="3">Manx</option>
-                    <option value="3">Munchkin</option>
-                    <option value="3">Norwegian forest cat</option>
+                    <option>Himalayan</option>
+                    <option>Japanese bobtail</option>
+                    <option>Javanese</option>
+                    <option>Korat</option>
+                    <option>LaPerm</option>
+                    <option>Maine Coon</option>
+                    <option>Manx</option>
+                    <option>Munchkin</option>
+                    <option>Norwegian forest cat</option>
 
 
 
                   </select>
                   <input
                     type="text"
-                    placeholder="Pet's Location  : Enter City, State or Zip Code"
+                    placeholder="Pet's Location  : Enter City, State or Zip Code" name="location" formControlName="location"
                   />
-                  <select class="form-select" aria-label="Default select example">
+                  <select class="form-select" aria-label="Default select example" name="spayed" formControlName="spayed">
                     <option selected>Is your cat spayed or neutered?:</option>
-                    <option value="1">Yes</option>
-                    <option value="2">No</option>
+                    <option>Yes</option>
+                    <option>No</option>
                   </select>
-                  <select class="form-select" aria-label="Default select example">
+                  <select class="form-select" aria-label="Default select example" name="reason" formControlName="reason">
                     <option selected>Why do you need to rehome your cat?:</option>
-                    <option value="1">Behavioral issues</option>
-                    <option value="2">Busy schedule</option>
-                    <option value="2">Does not get along with another pet</option>
-                    <option value="2">Fostered</option>
-                    <option value="2">Found or abandoned</option>
-                    <option value="2">Human health issues (e.g allergies, sickness)</option>
-                    <option value="2">Infant, young children or pregnancy</option>
-                    <option value="2">Landlord permission issues</option>
-                    <option value="2">Ongoing costs</option>
-                    <option value="2">Pet medical expenses (e.g vet procedure)</option>
-                    <option value="2">Relocating</option>
+                    <option>Behavioral issues</option>
+                    <option>Busy schedule</option>
+                    <option>Does not get along with another pet</option>
+                    <option>Fostered</option>
+                    <option>Found or abandoned</option>
+                    <option>Human health issues (e.g allergies, sickness)</option>
+                    <option>Infant, young children or pregnancy</option>
+                    <option>Landlord permission issues</option>
+                    <option>Ongoing costs</option>
+                    <option>Pet medical expenses (e.g vet procedure)</option>
+                    <option>Relocating</option>
                   </select>
 
-                  <select class="form-select" aria-label="Default select example">
+                  <select class="form-select" aria-label="Default select example" name="shots_upto_date" formControlName="shots_upto_date">
                     <option selected>Shots up up date?</option>
-                    <option value="1">Yes</option>
-                    <option value="2">No</option>
-                    <option value="3">Unknown</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>Unknown</option>
 
                   </select>
 
@@ -168,24 +168,25 @@
                     <h5>Cat's Story</h5>
                     <p>Share anything here about your cat.</p>
 
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="story" formControlName="story"></textarea>
                   </div>
                   <div class="form-group">
                     <h5>Cat's Diet</h5>
                     <p>To better ensure your pet’s diet is maintained with the new pet owner, please tell us what brand  and type of food they eat.</p>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="diet" formControlName="diet"></textarea>
                   </div>
 
                   <div style="text-align: center">
                     <p>Upload photo</p>
                     <div [innerHtml]="msg" *ngIf="msg" style="color: red"></div>
                     <div><img id="imgupload" [src]="url" *ngIf="url" /></div>
-                    <p>
-                      <input type="file" (change)="selectFile($event)" />
-                    </p>
+                    <!-- <p>
+                      <input type="file" (change)="selectFile($event)" name="image" [(ngModel)]="form.image"/>
+                    </p> -->
+                    <input type="file" (change)="uploadFile($event)">
                   </div>
 
-                  <input type="submit" value="submit" />
+                  <input type="submit" value="submit" (click)="onCreate()"/>
                 </div>
                 <div class="close-box">
                   <label for="chkBox1" class="box-close1">X</label>

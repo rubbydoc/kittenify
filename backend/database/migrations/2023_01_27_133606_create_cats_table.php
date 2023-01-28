@@ -25,13 +25,6 @@ return new class extends Migration
             $table->string('location');
             $table->string('breed');
             $table->string('shots_upto_date');
-            $table->string('house_trained');
-            $table->string('good_with_dogs');
-            $table->string('good_with_cats');
-            $table->string('good_with_kids');
-            $table->string('purebred');
-            $table->string('has_special_needs');
-            $table->string('need_experienced_adopter');
             $table->text('story');
             $table->text('diet');
             $table->string('image');
