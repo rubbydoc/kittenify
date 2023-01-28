@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LostnfoundComponent } from './lostnfound/lostnfound.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { RehomeComponent } from './rehome/rehome.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'cat-breeds',
     component: CatBreedComponent
+  },
+  {
+    path: 'rehome',
+    component: RehomeComponent
   }
 ];
 

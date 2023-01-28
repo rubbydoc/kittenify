@@ -1,0 +1,94 @@
+<div class="container">
+  <div class="card">
+      <div class="main active">
+          <div class="image">
+              <span><img src="https://imgur.com/sNwSvzv.png"></span>
+          </div>
+          <div class="heading">
+              <h3>Create a Free Preview Account</h3>
+              <p>Already signed up?<a href="#"> Log in</a></p>
+          </div>
+          <div class="input-text">
+              <input type="text" placeholder="First Name" require="required" id="f_name">
+          </div>
+          <div class="input-text">
+              <input type="text" placeholder="Last Name"> 
+          </div>
+          <div class="input-text">
+              <input type="text" placeholder="Job Title" require="required">
+          </div>
+          <div class="button">
+              <button class="next-btn" (click)="next()">Next</button> 
+          </div>
+      </div>
+  
+      <div class="main">
+          <div class="image">
+              <span><img src="https://imgur.com/sNwSvzv.png"></span>
+          </div>
+          <div class="heading">
+              <h3>Create a Free Preview Account</h3>
+              <p>Already signed up?<a href="#"> Log in</a></p>
+          </div>
+          <div class="input-text">
+              <input type="text" placeholder="Company" require="required">
+          </div>
+          <div class="input-text">
+              <input type="text" placeholder="Phone" require="required">
+          </div>
+          <div class="input-text">
+              <input type="text" placeholder="Industry" require="required">
+          </div>
+          <div class="button">
+              <button class="prev-btn" (click)="previous()">Previous</button>
+              <button class="next-btn" (click)="next()">Next</button>
+          </div>
+      </div>
+      
+      <div class="main">
+          <div class="image">
+              <span><img src="https://imgur.com/sNwSvzv.png"></span>
+          </div>
+          <div class="heading">
+              <h3>Create a Free Preview Account</h3>
+              <p>Already signed up?<a href="#"> Log in</a></p>
+          </div>
+          <div class="input-text">
+              <input type="text" placeholder="E-mail" require="required">
+          </div>
+          <div class="input-text">
+              <input type="password" placeholder="Password" id="passcode" require="required">
+              <i class="fa fa-eye-slash eyes"></i>
+          </div>
+          <div class="input-text">
+              <input type="password" placeholder="Confirm password" id="confirm_passcode" require="required">
+              <i class="fa fa-eye-slash confirm_eyes"></i>
+          </div>
+          <div class="button">
+              <button class="prev-btn" (click)="previous()">Previous</button>
+              <button class="submit">Submit</button>
+            
+          </div>
+      </div>
+      <div class="main">
+          <div class="final-step">
+              <div class="check-sign">
+                  <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                  <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                  <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                  </svg>
+                  
+              </div>
+              <h3>Verify your E-mail Address</h3>
+              <p>Thanks Mr. <span id="s_name"></span> we have sent you a confirmation email,please click 
+              on the link to confirm your email address.</p>
+          </div>
+          
+      </div>    
+      
+      
+      
+      
+      
+  </div>
+</div>
