@@ -31,13 +31,9 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.js",
-<<<<<<< HEAD
-              "src/js/filescripts.js"
-=======
               "src/assets/js/custom.js"
 
 
->>>>>>> 04daf59e69a5ccfa8679fb88b06f3efea6e396de
             ]
           },
           "configurations": {

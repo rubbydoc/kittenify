@@ -334,7 +334,7 @@ right: 5px;
 #chkBox:checked + .mainContnt{
   visibility: visible;
   opacity: 1;
-}
+} 
 #chkBox1:checked + .mainContnt{
   visibility: visible;
   opacity: 1;
