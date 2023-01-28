@@ -11,8 +11,12 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { LostnfoundComponent } from './lostnfound/lostnfound.component';
 import { FormsModule } from '@angular/forms';
 import { CatBreedComponent } from './cat-breed/cat-breed.component';
+<<<<<<< HEAD
 import { CatproductsComponent } from './catproducts/catproducts.component';
 import { HeaderComponent } from './header/header.component';
+=======
+import { RehomeComponent } from './rehome/rehome.component';
+>>>>>>> 04daf59e69a5ccfa8679fb88b06f3efea6e396de
 
 @NgModule({
   declarations: [
@@ -22,8 +26,12 @@ import { HeaderComponent } from './header/header.component';
     SignUpComponent,
     LostnfoundComponent,
     CatBreedComponent,
+<<<<<<< HEAD
     CatproductsComponent,
     HeaderComponent
+=======
+    RehomeComponent
+>>>>>>> 04daf59e69a5ccfa8679fb88b06f3efea6e396de
   ],
   imports: [
     BrowserModule,

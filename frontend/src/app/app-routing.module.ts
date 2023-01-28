@@ -7,6 +7,7 @@ import { LostnfoundComponent } from './lostnfound/lostnfound.component';
 import { CatproductsComponent } from './catproducts/catproducts.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { RehomeComponent } from './rehome/rehome.component';
 
 
 const routes: Routes = [
@@ -42,7 +43,13 @@ const routes: Routes = [
   {
     path: 'catproducts',
     component: CatproductsComponent
+
+  },
+  {
+    path: 'rehome',
+    component: RehomeComponent
   }
+
 ];
 
 @NgModule({
