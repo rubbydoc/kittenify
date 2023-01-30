@@ -1,3 +1,4 @@
+import { AdoptionComponent } from './adoption/adoption.component';
 import { CatBreedComponent } from './cat-breed/cat-breed.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -43,7 +44,7 @@ const routes: Routes = [
     component: CatBreedComponent
   },
   {
-    path: 'catproducts',
+    path: 'cat-products',
     component: CatproductsComponent
 
   },
@@ -54,6 +55,10 @@ const routes: Routes = [
   {
     path: 'cat-vitamins',
     component: CatvitaminsComponent
+  },
+  {
+    path: 'adoption',
+    component: AdoptionComponent
   },
   {
     path: 'rehome-form',

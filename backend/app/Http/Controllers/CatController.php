@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 class CatController extends Controller
 {
     public function index(){
+
         return Cat::all();
 
     }
@@ -35,8 +36,18 @@ class CatController extends Controller
             'shots_upto_date'=>$request->shots_upto_date,
             'story'=>$request->story,
             'diet'=>$request->diet,
-            'image'=>$compPic
+            'image'=>$compPic,
+
+
         ]);
+
+
+
+
+
+
+
+
 
 
         // $this->validate($request, [
@@ -80,5 +91,6 @@ class CatController extends Controller
     public function show(Cat $cat)
     {
         return $cat;
+
     }
 }
