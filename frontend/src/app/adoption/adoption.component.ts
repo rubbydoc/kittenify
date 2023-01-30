@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 export class AdoptionComponent {
 
 cats : any;
+
 $url :any = 'http://localhost:8000/storage/cats/';
 constructor(private http:HttpClient){}
 

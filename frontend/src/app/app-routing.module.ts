@@ -11,6 +11,8 @@ import { RehomeFormComponent } from './rehome-form/rehome-form.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RehomeComponent } from './rehome/rehome.component';
+import { AdoptCatComponent } from './adopt-cat/adopt-cat.component';
+
 
 
 const routes: Routes = [
@@ -63,6 +65,10 @@ const routes: Routes = [
   {
     path: 'rehome-form',
     component: RehomeFormComponent
+  },
+  {
+    path: 'adoption/:id',
+    component: AdoptCatComponent
   }
 
 ];
