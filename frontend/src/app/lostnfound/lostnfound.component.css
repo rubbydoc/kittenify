@@ -283,7 +283,7 @@ font-family: 'Fredoka One', cursive;
 margin-bottom: 16px;
 font-family: 'Fredoka One', cursive;
 }
-.login-form input {
+.login-form input , select{
 width: 100%;
 height: 52px;
 padding: 15px;

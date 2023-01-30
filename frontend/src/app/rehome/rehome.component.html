@@ -189,7 +189,7 @@
                       <input type="file" (change)="selectFile($event)" name="image" [(ngModel)]="form.image"/>
                     </p> -->
                     <label for="image">Upload photo</label>
-                    <input name="image" formControlName="image" id="image" type="file" (change)="uploadFile($event)">
+                    <input name="image" formControlName="image" id="image" type="file" (change)="uploadImage($event)">
                   </div>
 
                   <input type="submit" value="submit" (click)="onCreate()"/>

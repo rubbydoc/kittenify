@@ -27,21 +27,27 @@
                 <div class="box">
                     <div class="boxes bx2">
                         <h3>Please Enter Found Location</h3>
-                        <div class="login-form">
-                          <input type="text" placeholder="Place Found: Enter City, State or Zip Code ">
-                          <input type="text" placeholder="Gender:">
-                            <input type="date" placeholder="Date Found:">
-                            <input type="text" placeholder="Description:">
+                        <div class="login-form" [formGroup]="form">
+                          <input type="text" placeholder="Place Found: Enter City, State or Zip Code " name="location" formControlName="location">
+                          <select class="form-select" aria-label="Default select example" name="gender" formControlName="gender">
+                            <option selected>Gender:</option>
+                            <option >Male</option>
+                            <option >Female</option>
+                            <option >Three</option>
+                          </select>
+                            <input type="date" placeholder="Date Found:" name="date" formControlName="date">
+                            <input type="text" placeholder="Description:" name="description" formControlName="description">
                             
                             <div style="text-align:center">
-                              <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
-                              <div><img id="imgupload" [src]="url" *ngIf="url"></div>
+                              <!-- <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div> -->
+                              <!-- <div><img id="imgupload" [src]="url" *ngIf="url"></div> -->
                               <p>
-                                <input type="file" (change)="selectFile($event)">
+                                <input name="image" formControlName="image" id="image" type="file" (change)="uploadImage($event)">
+
                               </p>
                             </div>
 
-                            <input type="submit" value="submit">
+                            <input type="submit" value="submit" (click)="onCreate()">
                         </div>
                         <div class="close-box">
                             <label for="chkBox" class="box-close">X</label>
@@ -66,10 +72,11 @@
 
 
                           <div style="text-align:center">
-                            <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
-                            <div><img id="imgupload" [src]="url" *ngIf="url"></div>
+                            <!-- <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div> -->
+                            <!-- <div><img id="imgupload" [src]="url" *ngIf="url"></div> -->
                             <p>
-                              <input type="file" (change)="selectFile($event)">
+                              <input name="image" formControlName="image" id="image" type="file" (change)="uploadImage($event)">
+
                             </p>
                           </div>
 
@@ -133,10 +140,10 @@
 
 
                           <div style="text-align:center">
-                            <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
-                            <div><img id="imgupload" [src]="url" *ngIf="url"></div>
+                            <!-- <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div> -->
+                            <!-- <div><img id="imgupload" [src]="url" *ngIf="url"></div> -->
                             <p>
-                              <input type="file" (change)="selectFile($event)">
+                              <input type="file" (change)="uploadImage($event)">
                             </p>
                           </div>
 
@@ -162,10 +169,10 @@
                             <input type="text" placeholder="Description:">
                             
                             <div style="text-align:center">
-                              <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
-                              <div><img id="imgupload" [src]="url" *ngIf="url"></div>
+                              <!-- <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div> -->
+                              <!-- <div><img id="imgupload" [src]="url" *ngIf="url"></div> -->
                               <p>
-                                <input type="file" (change)="selectFile($event)">
+                                <input type="file" (change)="uploadImage($event)">
                               </p>
                             </div>
 
