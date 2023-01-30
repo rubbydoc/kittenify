@@ -50,7 +50,7 @@
               <div class="boxes bx3">
 
                 <h3>Please Enter Pet Information</h3>
-                
+
                 <div class="login-form" [formGroup]="form">
                   <input type="text" placeholder="Name:" name="name" formControlName="name"/>
                   <select class="form-select" aria-label="Default select example" name="gender" formControlName="gender">
@@ -182,13 +182,14 @@
                   </div>
 
                   <div style="text-align: center">
-                    <p>Upload photo</p>
-                    <div [innerHtml]="msg" *ngIf="msg" style="color: red"></div>
-                    <div><img id="imgupload" [src]="url" *ngIf="url" /></div>
+                    <!-- <p>Upload photo</p> -->
+                    <!-- <div [innerHtml]="msg" *ngIf="msg" style="color: red"></div> -->
+                    <!-- <div><img id="imgupload" [src]="url" *ngIf="url" /></div> -->
                     <!-- <p>
                       <input type="file" (change)="selectFile($event)" name="image" [(ngModel)]="form.image"/>
                     </p> -->
-                    <input type="file" (change)="uploadFile($event)">
+                    <label for="image">Upload photo</label>
+                    <input name="image" formControlName="image" id="image" type="file" (change)="uploadFile($event)">
                   </div>
 
                   <input type="submit" value="submit" (click)="onCreate()"/>
