@@ -17,6 +17,7 @@ import { RehomeComponent } from './rehome/rehome.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
 import { CatvitaminsComponent } from './catvitamins/catvitamins.component';
+import { RehomeFormComponent } from './rehome-form/rehome-form.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CatvitaminsComponent } from './catvitamins/catvitamins.component';
     HeaderComponent,
     RehomeComponent,
     AboutComponent,
-    CatvitaminsComponent
+    CatvitaminsComponent,
+    RehomeFormComponent
   ],
   imports: [
     BrowserModule,

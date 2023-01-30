@@ -1,0 +1,173 @@
+<body>
+
+<div class="container">
+    <h1>REHOME FORM</h1>
+    <p>Let's find the best home for your cat</p>
+    <form>
+        <div class="row">
+            <div class="column">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Your name here">
+            </div>
+            <div class="column">
+                <label for="email">Gender:</label>
+                <select class="form-select" aria-label="Default select example" name="gender" formControlName="gender">
+                    <option selected>Select:</option>
+                    <option >Male</option>
+                    <option >Female</option>
+                    <option >Three</option>
+                  </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label for="name">Age:</label>
+                <!--     -->
+                <select class="form-select" aria-label="Default select example" name="age" formControlName="age">
+                    <option selected>Age:</option>
+                    <option >Kitten</option>
+                    <option>Young</option>
+                    <option>Adult</option>
+                    <option>Senior</option>
+                  </select>
+            </div>
+            <div class="column">
+                <label for="email">Color:</label>
+                <select class="form-select" aria-label="Default select example" name="color" formControlName="color">
+                    <option selected>Color:</option>
+                    <option >Black</option>
+                    <option>Black and White</option>
+                    <option>Brown or Chocolate</option>
+                    <option>Calico</option>
+                    <option>Gray</option>
+                    <option>Orange</option>
+                    <option>Brown Tabby</option>
+                    <option>Silver Tabby</option>
+                    <option>Orange Tabby</option>
+                    <option>Tan or Fawn</option>
+                    <option>White</option>
+                    <option>Cream</option>
+                    <option>Spotted Tabby</option>
+                    <option>Tiger Striped</option>
+
+                  </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label for="name">Hair Length:</label>
+                <select class="form-select" aria-label="Default select example" name="hair_length" formControlName="hair_length">
+                    <option selected>Hair length:</option>
+                    <option>Hairless</option>
+                    <option>Short</option>
+                    <option>Medium</option>
+                    <option>Long</option>
+
+                  </select>
+            </div>
+            <div class="column">
+                <label for="email">Cat Breed:</label>
+                <select class="form-select"  name="breed" formControlName="breed" aria-label="Default select example">
+                    <option selected>Breed:</option>
+                    <option>Abyssinian</option>
+                    <option>American bobtail</option>
+                    <option>American curl</option>
+                    <option>American shorthair
+                    </option>
+                    <option>American wirehair</option>
+                    <option>Balinese</option>
+                    <option>Bengal</option>
+                    <option>Birman</option>
+                    <option>Bombay</option>
+                    <option>British shorthair
+                    </option>
+                    <option>Burmese</option>
+                    <option>Calico</option>
+                    <option>Chartreux</option>
+                    <option>Colorpoint shorthair</option>
+                    <option>Cornish rex
+                    </option>
+                    <option>Cymric</option>
+                    <option>Devon rex</option>
+                    <option>Domestic longhair</option>
+                    <option>Domestic mediumhair</option>
+                    <option>Domestic shorthair</option>
+                    <option>Egyptian mau
+                    </option>
+                    <option>European burmese</option>
+                    <option>Exotic</option>
+                    <option>Havana brown
+                    </option>
+                    <option>Himalayan</option>
+                    <option>Japanese bobtail</option>
+                    <option>Javanese</option>
+                    <option>Korat</option>
+                    <option>LaPerm</option>
+                    <option>Maine Coon</option>
+                    <option>Manx</option>
+                    <option>Munchkin</option>
+                    <option>Norwegian forest cat</option>
+
+                  </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label for="subject">Lost Location:</label>
+                <input type="text"placeholder="Pet's Location  : Enter City, State or Zip Code" name="location" formControlName="location"/>
+            </div>
+            <div class="column">
+                <label for="spayed" ></label>
+                <select class="form-select" aria-label="Default select example" name="spayed" formControlName="spayed">
+                    <option selected>Is your cat spayed or neutered?:</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label for="shots_upto_date" ></label>
+                <select class="form-select" aria-label="Default select example" name="shots_upto_date" formControlName="shots_upto_date">
+                    <option selected>Shots up up date?</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>Unknown</option>
+                  </select>
+            </div>
+            <div class="column">
+                <label for="reason" ></label>
+                <select class="form-select" aria-label="Default select example" name="reason" formControlName="reason">
+                    <option selected>Why do you need to rehome your cat?:</option>
+                    <option>Behavioral issues</option>
+                    <option>Busy schedule</option>
+                    <option>Does not get along with another pet</option>
+                    <option>Fostered</option>
+                    <option>Found or abandoned</option>
+                    <option>Human health issues (e.g allergies, sickness)</option>
+                    <option>Infant, young children or pregnancy</option>
+                    <option>Landlord permission issues</option>
+                    <option>Ongoing costs</option>
+                    <option>Pet medical expenses (e.g vet procedure)</option>
+                    <option>Relocating</option>
+                  </select>
+            </div>
+        </div>
+        <div class="row">
+           
+            <div class="column">
+                <label for="image">Image</label>
+                <input name="image" formControlName="image" id="image" type="file" >
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label for="issue">Describe your issue</label>
+                <textarea id="issue" placeholder="Describe your issue in detail here" rows="3"></textarea>
+            </div>
+        </div>
+        <button>Submit</button>
+    </form>
+</div>
+</body>
