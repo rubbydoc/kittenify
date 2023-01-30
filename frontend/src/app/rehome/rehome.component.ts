@@ -57,17 +57,17 @@ constructor(private http:HttpClient,public fb: FormBuilder
     this.form = this.fb.group({
       name: [''],
       gender:[''],
-age:[''],
-color:[''],
-hair_length:[''],
-breed:[''],
-location:[''],
-spayed:[''],
-reason:[''],
-shots_upto_date:[''],
-story:[''],
-diet:[''],
-image:null,
+      age:[''],
+      color:[''],
+      hair_length:[''],
+      breed:[''],
+      location:[''],
+      spayed:[''],
+      reason:[''],
+      shots_upto_date:[''],
+      story:[''],
+      diet:[''],
+      image:null,
 
     });
   }

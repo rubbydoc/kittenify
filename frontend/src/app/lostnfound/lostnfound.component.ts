@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./lostnfound.component.css']
 })
 export class LostnfoundComponent {
+
+  
   //url; //Angular 8
 	url: any; //Angular 11, for stricter type
 	msg = "";

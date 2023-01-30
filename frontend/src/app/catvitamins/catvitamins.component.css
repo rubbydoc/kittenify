@@ -142,7 +142,6 @@ button[type="submit"]:hover {
 .name1{
   color: #960303;
 }
-
 #buttons #buttonlearnmore img{
   width:80px;
   height:85px;
@@ -170,15 +169,15 @@ button[type="submit"]:hover {
   font-size: 20px;
   margin-left:70px;
   margin-top: 40px;
-  background-color: #EC994B;
+  background-color: #FFD59E;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
- /* #buttonlearnmore:hover{
-  background-color: #FFD59E;
+ #buttonlearnmore:hover{
+  background-color: #EC994B;
 
-} */
+}
  #buttonlearnmore:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
@@ -189,7 +188,7 @@ button[type="submit"]:hover {
   font-family: 'Fredoka One', cursive;
   margin-left:70px;
   margin-top: 40px;
-  background-color:  #FFD59E ;
+  background-color: #EC994B ;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
@@ -197,17 +196,19 @@ button[type="submit"]:hover {
  #buttonfound img{
   width: 80px;
 }
- #buttonfound:hover{
-  background-color: #EC994B;
+ /* #buttonfound:hover{
+  background-color: #FFD59E;
 
-}
+} */
  #buttonfound:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
- * {
+
+
+ /* * {
   box-sizing: border-box;
-}
+} */
 body {
   padding: 1rem;
 }

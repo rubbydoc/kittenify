@@ -15,6 +15,8 @@ import { CatproductsComponent } from './catproducts/catproducts.component';
 import { HeaderComponent } from './header/header.component';
 import { RehomeComponent } from './rehome/rehome.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AboutComponent } from './about/about.component';
+import { CatvitaminsComponent } from './catvitamins/catvitamins.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     CatBreedComponent,
     CatproductsComponent,
     HeaderComponent,
-    RehomeComponent
+    RehomeComponent,
+    AboutComponent,
+    CatvitaminsComponent
   ],
   imports: [
     BrowserModule,

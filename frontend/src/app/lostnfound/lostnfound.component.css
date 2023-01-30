@@ -250,7 +250,7 @@ nav label:hover{
   /* display: grid;
   grid-template-columns: repeat(2, 1fr); */
   width: 50%;
-  height: 300px;
+  height: 800px;
   transform: translateY(-1000px);
   transition: all 1s ease-in;
   margin: auto;
@@ -264,7 +264,7 @@ nav label:hover{
   /* display: grid;
   grid-template-columns: repeat(2, 1fr); */
   width: 50%;
-  height: 700px;
+  height: 900px;
   transform: translateY(-1000px);
   transition: all 1s ease-in;
   margin: auto;
@@ -279,6 +279,7 @@ font-family: 'Fredoka One', cursive;
   padding: 60px 50px 0 32px;
 }
 .bx3 h3 {
+  margin-top: 20px;
 margin-bottom: 16px;
 font-family: 'Fredoka One', cursive;
 }
@@ -322,9 +323,9 @@ color: #434242;
   font-size: 18px
 } */
 .box-close  {
-position: absolute;
-bottom: 225px;
-right: 5px;
+  position: absolute;
+  top:10px;
+  right: 5px;
 }
 .box-close1  {
 position: absolute;

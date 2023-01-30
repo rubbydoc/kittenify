@@ -20,6 +20,7 @@
         <h1>LOST 'N FOUND</h1>
         <div class="buttons">
           <!-- <button type="button" class="btn" for="chkbox">I Found a Pet</button> -->
+
             <label class="btn" for="chkBox">I Found a Pet</label>
             <input type="checkbox" name="" id="chkBox">
             <div class="mainContnt">
@@ -27,8 +28,19 @@
                     <div class="boxes bx2">
                         <h3>Please Enter Found Location</h3>
                         <div class="login-form">
-                            <input type="text" placeholder="Enter City, State or Zip Code ">
-                            <!-- <input type="password" placeholder="Enter Your Password.."> -->
+                          <input type="text" placeholder="Place Found: Enter City, State or Zip Code ">
+                          <input type="text" placeholder="Gender:">
+                            <input type="date" placeholder="Date Found:">
+                            <input type="text" placeholder="Description:">
+                            
+                            <div style="text-align:center">
+                              <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
+                              <div><img id="imgupload" [src]="url" *ngIf="url"></div>
+                              <p>
+                                <input type="file" (change)="selectFile($event)">
+                              </p>
+                            </div>
+
                             <input type="submit" value="submit">
                         </div>
                         <div class="close-box">
@@ -48,8 +60,9 @@
 
                           <input type="text" placeholder="Name:">
                           <input type="text" placeholder="Gender:">
-                          <input type="text" placeholder="Date Lost:">
+                          <input type="date" placeholder="Date Lost:">
                           <input type="text" placeholder="Place Lost  : Enter City, State or Zip Code">
+                          <input type="text" placeholder="Description:">
 
 
                           <div style="text-align:center">
@@ -70,7 +83,7 @@
           </div>
 
           <a routerLink="/home"><label class="btn" for="chkBox">Back to Home</label></a>
-            <input type="checkbox" name="" id="chkBox">
+            <!-- <input type="checkbox" name="" id="chkBox">
             <div class="mainContnt">
                 <div class="box">
                     <div class="boxes bx1"></div>
@@ -86,8 +99,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-      </div>
+            </div> -->
+        </div>
       </div>
     </nav>
   </section>
@@ -103,8 +116,68 @@
    <p>
     If you are thinking of bringing a cat in to your home you should make sure that all are <br>  nice and comfortable.
     From foods to health and from us to your care.</p>
-    <button id="buttonlearnmore" ><img src="../assets/lost.png" alt=""> <br> Lost a Pet</button>
-    <button id="buttonfound" ><img src="../assets/paw.png" alt=""> <br> Found a Pet</button>
+    
+    <label class="btn" for="chkBox1" id="buttonlearnmore"><img src="../assets/lost.png" alt=""><br>I Lost a Pet</label>
+            <input type="checkbox" name="" id="chkBox1">
+            <div class="mainContnt">
+              <div class="box1">
+                  <div class="boxes bx3">
+                      <h3>Please Enter Lost Location and Pet Information</h3>
+                      <div class="login-form">
+
+                          <input type="text" placeholder="Name:">
+                          <input type="text" placeholder="Gender:">
+                          <input type="date" placeholder="Date Lost:">
+                          <input type="text" placeholder="Place Lost  : Enter City, State or Zip Code">
+                          <input type="text" placeholder="Description:">
+
+
+                          <div style="text-align:center">
+                            <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
+                            <div><img id="imgupload" [src]="url" *ngIf="url"></div>
+                            <p>
+                              <input type="file" (change)="selectFile($event)">
+                            </p>
+                          </div>
+
+                          <input type="submit" value="submit">
+                      </div>
+                      <div class="close-box">
+                          <label for="chkBox1" class="box-close1">X</label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+    <label class="btn" for="chkBox"id="buttonfound"> <img src="../assets/paw.png" alt=""> <br>I Found a Pet</label>
+            <input type="checkbox" name="" id="chkBox">
+            <div class="mainContnt">
+                <div class="box">
+                    <div class="boxes bx2">
+                        <h3>Please Enter Found Location</h3>
+                        <div class="login-form">
+                          <input type="text" placeholder="Place Found: Enter City, State or Zip Code ">
+                          <input type="text" placeholder="Gender:">
+                            <input type="date" placeholder="Date Found:">
+                            <input type="text" placeholder="Description:">
+                            
+                            <div style="text-align:center">
+                              <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
+                              <div><img id="imgupload" [src]="url" *ngIf="url"></div>
+                              <p>
+                                <input type="file" (change)="selectFile($event)">
+                              </p>
+                            </div>
+
+                            <input type="submit" value="submit">
+                        </div>
+                        <div class="close-box">
+                            <label for="chkBox" class="box-close">X</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
 
   </div>
 
@@ -167,16 +240,6 @@
   </div>
 
 </div>
-
-<!-- <div class="nextcontainer">
-  <div class="first">
-    <h4>Welcome!</h4>
-    <h1>WHAT WE OFFER</h1>
-    <img id="smallcat" src="../assets/fat-cat.png" alt="">
-    <p>Who safeguarded who?<br>Sometimes the littlest things take up the most room in your heart.</p>
-  </div>
-</div> -->
-
 </main>
 
 

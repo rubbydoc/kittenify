@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { AppComponent } from './app.component';
 import { LostnfoundComponent } from './lostnfound/lostnfound.component';
 import { CatproductsComponent } from './catproducts/catproducts.component';
+import { CatvitaminsComponent } from './catvitamins/catvitamins.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RehomeComponent } from './rehome/rehome.component';
@@ -48,6 +49,10 @@ const routes: Routes = [
   {
     path: 'rehome',
     component: RehomeComponent
+  },
+  {
+    path: 'cat-vitamins',
+    component: CatvitaminsComponent
   }
 
 ];
