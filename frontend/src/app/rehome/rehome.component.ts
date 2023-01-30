@@ -43,20 +43,27 @@ msg = "";
 //     this.url = reader.result;
 //   }
 // }
-form: FormGroup;
+form!: FormGroup;
+files:any;
 
-uploadFile(event) {
-  const file = (event.target as HTMLInputElement)?.files?.[0];
-  this.form.patchValue({
-    image: file,
-  });
-  // this.form.get('image')?.updateValueAndValidity();
+uploadImage(event) {
+  this.files = event.target.files[0];
+
+
+  // this.form.get('
+ 
+
+
 }
-constructor(private http:HttpClient,public fb: FormBuilder
-  ){
-    this.form = this.fb.group({
-      name: [''],
-      gender:[''],
+
+
+ngOnInit():void{
+  this.createForm();
+}
+createForm(){
+  this.form = this.fb.group({
+    name: [''],
+    gender:[''],
 age:[''],
 color:[''],
 hair_length:[''],
@@ -67,9 +74,18 @@ reason:[''],
 shots_upto_date:[''],
 story:[''],
 diet:[''],
-image:null,
+image:[null],
 
-    });
+  });
+
+}
+
+get f(){
+  return this.form.controls;
+}
+constructor(private http:HttpClient,public fb: FormBuilder
+  ){
+
   }
 
 
@@ -89,7 +105,7 @@ onCreate(){
   formData.append('shots_upto_date', this.form.get('shots_upto_date')?.value);
   formData.append('story', this.form.get('story')?.value);
   formData.append('diet', this.form.get('diet')?.value);
-  formData.append('image', this.form.controls['image'].value);
+  formData.append('image', this.files, this.files.name);
 
   this.http
     .post('http://localhost:8000/api/cats', formData)

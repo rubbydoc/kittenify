@@ -177,13 +177,14 @@
                   </div>
 
                   <div style="text-align: center">
-                    <p>Upload photo</p>
-                    <div [innerHtml]="msg" *ngIf="msg" style="color: red"></div>
-                    <div><img id="imgupload" [src]="url" *ngIf="url" /></div>
+                    <!-- <p>Upload photo</p> -->
+                    <!-- <div [innerHtml]="msg" *ngIf="msg" style="color: red"></div> -->
+                    <!-- <div><img id="imgupload" [src]="url" *ngIf="url" /></div> -->
                     <!-- <p>
                       <input type="file" (change)="selectFile($event)" name="image" [(ngModel)]="form.image"/>
                     </p> -->
-                    <input type="file" (change)="uploadFile($event)">
+                    <label for="image">Upload photo</label>
+                    <input name="image" formControlName="image" id="image" type="file" (change)="uploadImage($event)">
                   </div>
 
                   <input type="submit" value="submit" (click)="onCreate()"/>
