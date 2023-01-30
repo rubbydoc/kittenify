@@ -26,12 +26,6 @@ export class RehomeComponent {
   
   constructor(private http:HttpClient,public fb: FormBuilder
     ){
-      
-  
-     
-  
-  
-  
   }
   
   ngOnInit():void{

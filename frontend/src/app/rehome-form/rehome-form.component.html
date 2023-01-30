@@ -3,19 +3,17 @@
 <div class="container">
     <h1>REHOME FORM</h1>
     <p>Let's find the best home for your cat</p>
-    <form>
+    <form [formGroup]="form">
         <div class="row">
             <div class="column">
                 <label for="name">Name:</label>
-                <input type="text" id="name" placeholder="Your name here">
+                <input type="text" id="name" placeholder="Pet name here" name="name" formControlName="name">
             </div>
             <div class="column">
                 <label for="email">Gender:</label>
                 <select class="form-select" aria-label="Default select example" name="gender" formControlName="gender">
-                    <option selected>Select:</option>
                     <option >Male</option>
                     <option >Female</option>
-                    <option >Three</option>
                   </select>
             </div>
         </div>
@@ -24,7 +22,6 @@
                 <label for="name">Age:</label>
                 <!--     -->
                 <select class="form-select" aria-label="Default select example" name="age" formControlName="age">
-                    <option selected>Age:</option>
                     <option >Kitten</option>
                     <option>Young</option>
                     <option>Adult</option>
@@ -34,7 +31,6 @@
             <div class="column">
                 <label for="email">Color:</label>
                 <select class="form-select" aria-label="Default select example" name="color" formControlName="color">
-                    <option selected>Color:</option>
                     <option >Black</option>
                     <option>Black and White</option>
                     <option>Brown or Chocolate</option>
@@ -57,7 +53,6 @@
             <div class="column">
                 <label for="name">Hair Length:</label>
                 <select class="form-select" aria-label="Default select example" name="hair_length" formControlName="hair_length">
-                    <option selected>Hair length:</option>
                     <option>Hairless</option>
                     <option>Short</option>
                     <option>Medium</option>
@@ -68,7 +63,6 @@
             <div class="column">
                 <label for="email">Cat Breed:</label>
                 <select class="form-select"  name="breed" formControlName="breed" aria-label="Default select example">
-                    <option selected>Breed:</option>
                     <option>Abyssinian</option>
                     <option>American bobtail</option>
                     <option>American curl</option>
@@ -117,9 +111,9 @@
                 <input type="text"placeholder="Pet's Location  : Enter City, State or Zip Code" name="location" formControlName="location"/>
             </div>
             <div class="column">
-                <label for="spayed" ></label>
+                <label for="spayed" >Is your cat spayed or neutered?:</label>
                 <select class="form-select" aria-label="Default select example" name="spayed" formControlName="spayed">
-                    <option selected>Is your cat spayed or neutered?:</option>
+                    <option selected></option>
                     <option>Yes</option>
                     <option>No</option>
                   </select>
@@ -127,18 +121,17 @@
         </div>
         <div class="row">
             <div class="column">
-                <label for="shots_upto_date" ></label>
+                <label for="shots_upto_date" >Shots up up date?</label>
                 <select class="form-select" aria-label="Default select example" name="shots_upto_date" formControlName="shots_upto_date">
-                    <option selected>Shots up up date?</option>
                     <option>Yes</option>
                     <option>No</option>
                     <option>Unknown</option>
                   </select>
             </div>
             <div class="column">
-                <label for="reason" ></label>
+                <label for="reason" >Why do you need to rehome your cat?</label>
                 <select class="form-select" aria-label="Default select example" name="reason" formControlName="reason">
-                    <option selected>Why do you need to rehome your cat?:</option>
+
                     <option>Behavioral issues</option>
                     <option>Busy schedule</option>
                     <option>Does not get along with another pet</option>
@@ -154,20 +147,26 @@
             </div>
         </div>
         <div class="row">
-           
+
             <div class="column">
                 <label for="image">Image</label>
-                <input name="image" formControlName="image" id="image" type="file" >
+                <input name="image" formControlName="image" id="image" type="file" (change)="uploadImage($event)">
 
             </div>
         </div>
         <div class="row">
             <div class="column">
-                <label for="issue">Describe your issue</label>
-                <textarea id="issue" placeholder="Describe your issue in detail here" rows="3"></textarea>
+                <label for="story">Pet's Story</label>
+                <textarea id="story" placeholder="Share anything here about your pet." rows="3" name="story" formControlName="story"></textarea>
             </div>
         </div>
-        <button>Submit</button>
+        <div class="row">
+          <div class="column">
+              <label for="diet">Pet's Diet</label>
+              <textarea id="diet" placeholder="To better ensure your pet's diet is maintained with the new pet owner, please tell us what brand and what type of food they eat." rows="3" name="diet" formControlName="diet"></textarea>
+          </div>
+      </div>
+        <button (click)="onCreate()">Submit</button>
     </form>
 </div>
 </body>
