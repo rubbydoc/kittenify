@@ -13,6 +13,7 @@ import { RehomeFormComponent } from './rehome-form/rehome-form.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RehomeComponent } from './rehome/rehome.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 
@@ -74,6 +75,10 @@ const routes: Routes = [
   {
     path: 'lostnfound/:status/:id',
     component: LostnfoundDetailComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
   }
 
 ];

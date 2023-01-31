@@ -22,6 +22,7 @@ import { AdoptionComponent } from './adoption/adoption.component';
 import { AdoptCatComponent } from './adopt-cat/adopt-cat.component';
 import { AdoptionDetailComponent } from './adoption-detail/adoption-detail.component';
 import { LostnfoundDetailComponent } from './lostnfound-detail/lostnfound-detail.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { LostnfoundDetailComponent } from './lostnfound-detail/lostnfound-detail
     AdoptionComponent,
     AdoptCatComponent,
     AdoptionDetailComponent,
-    LostnfoundDetailComponent
+    LostnfoundDetailComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
