@@ -1,3 +1,4 @@
+import { LostnfoundDetailComponent } from './lostnfound-detail/lostnfound-detail.component';
 import { AdoptionDetailComponent } from './adoption-detail/adoption-detail.component';
 import { AdoptionComponent } from './adoption/adoption.component';
 import { CatBreedComponent } from './cat-breed/cat-breed.component';
@@ -69,6 +70,10 @@ const routes: Routes = [
   {
     path: 'adoption/:id',
     component: AdoptionDetailComponent
+  },
+  {
+    path: 'lostnfound/:status/:id',
+    component: LostnfoundDetailComponent
   }
 
 ];

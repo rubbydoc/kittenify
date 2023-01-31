@@ -21,6 +21,7 @@ import { RehomeFormComponent } from './rehome-form/rehome-form.component';
 import { AdoptionComponent } from './adoption/adoption.component';
 import { AdoptCatComponent } from './adopt-cat/adopt-cat.component';
 import { AdoptionDetailComponent } from './adoption-detail/adoption-detail.component';
+import { LostnfoundDetailComponent } from './lostnfound-detail/lostnfound-detail.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AdoptionDetailComponent } from './adoption-detail/adoption-detail.compo
     RehomeFormComponent,
     AdoptionComponent,
     AdoptCatComponent,
-    AdoptionDetailComponent
+    AdoptionDetailComponent,
+    LostnfoundDetailComponent
   ],
   imports: [
     BrowserModule,

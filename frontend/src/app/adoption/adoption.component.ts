@@ -28,12 +28,5 @@ export class AdoptionComponent {
     );
   }
 
-  getCats() {
-    this.catService.getCats().subscribe(
-      (response) => this.cats = response,
-      (error) => {console.log(error)}
-      );
-
-
-  }
+ 
 }

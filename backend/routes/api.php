@@ -7,6 +7,7 @@ use App\Http\Controllers\CatBreedController;
 use App\Http\Controllers\CatController;
 use App\Http\Controllers\FoundCatController;
 use App\Http\Controllers\LostCatController;
+use App\Http\Controllers\LostFoundController;
 use App\Http\Controllers\PhysicalAttributeController;
 use App\Models\CatBreed;
 
@@ -21,8 +22,8 @@ Route::controller(AuthController::class)->group(function () {
 Route::apiResource('cat-breeds', CatBreedController::class);
 Route::apiResource('physical-attributes', PhysicalAttributeController::class);
 Route::apiResource('cats', CatController::class);
-Route::apiResource('found-cats', FoundCatController::class);
-Route::apiResource('lost-cats', LostCatController::class);
+// Route::apiResource('found-cats', FoundCatController::class);
+Route::apiResource('lostnfound-cats', LostFoundController::class);
 
 
 

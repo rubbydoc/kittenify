@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\LostCat;
+use App\Models\LostFound;
 use Illuminate\Http\Request;
 
-class LostCatController extends Controller
+class LostFoundController extends Controller
 {
-    //
     public function index(){
-        $lost_cats = LostCat::get();
-        return response()->json($lost_cats);
+        $lost_found = LostFound::get();
+        return response()->json($lost_found);
 
     }
 
@@ -21,40 +20,41 @@ class LostCatController extends Controller
         $file_name_only = pathinfo($complete_file_name, PATHINFO_FILENAME);
         $extension = $request->file('image')->getClientOriginalExtension();
         $compPic = str_replace('','_',$file_name_only).'_'.rand().'_'.time().'.'.$extension;
-        $path = $request->file('image')->storeAs('public/lost_cats',$compPic);
+        $path = $request->file('image')->storeAs('public/lost_n_found',$compPic);
 
-        return LostCat::create([
+        return LostFound::create([
             'name'=>$request->name,
             'location'=>$request->location,
             'gender'=>$request->gender,
             'date'=>$request->date,
             'description'=>$request->description,
-            'image'=>$compPic
+            'image'=>$compPic,
+            'status'=>$request->status
         ]);
     }
 
     public function update(Request $request, $id)
     {
 
-        return LostCat::find($id)->update([
+        return LostFound::find($id)->update([
             'name'=>$request->name,
             'location'=>$request->location,
             'gender'=>$request->gender,
             'date'=>$request->date,
             'description'=>$request->description,
+            'status'=>$request->status
 
             ]
         );
     }
 
 
-    public function delete(LostCat $lostCat){
-        return $lostCat->delete();
+    public function delete(LostFound $lostFound){
+        return $lostFound->delete();
     }
 
-    public function show(LostCat $lostCat)
+    public function show(LostFound $lostFound)
     {
-        return $lostCat;
+        return $lostFound;
     }
 }
-

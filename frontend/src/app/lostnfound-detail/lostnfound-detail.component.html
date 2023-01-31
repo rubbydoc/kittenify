@@ -1,0 +1,8 @@
+<div *ngIf="lostFound$ | async as lostFound">
+  <h3>{{ lostFound.name }}</h3>
+  <p>Id: {{ lostFound.id }}</p>
+  <p>LOcation: {{ lostFound.location }}</p>
+
+  <label for="hero-name">Gender: {{lostFound.gender}}</label>
+</div>
+

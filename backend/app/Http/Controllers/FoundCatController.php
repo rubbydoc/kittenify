@@ -9,7 +9,8 @@ class FoundCatController extends Controller
 {
     //
     public function index(){
-        return FoundCat::all();
+        $found_cats = FoundCat::get();
+        return response()->json($found_cats);
 
     }
 

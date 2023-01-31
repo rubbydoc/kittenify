@@ -177,7 +177,6 @@
                             <option selected>Gender:</option>
                             <option >Male</option>
                             <option >Female</option>
-                            <option >Three</option>
                           </select>
                             <input type="date" placeholder="Date Found:" name="date" formControlName="date">
                             <input type="text" placeholder="Description:" name="description" formControlName="description">
@@ -205,62 +204,47 @@
 </div>
 
 <div class="wall">
-  <div class="containertwo">
-    <h1>
-      Recently Uploaded Pets
-    </h1>
 
 
-    <div class="row">
-      <div class="card">
-        <div class="card-header">
-          <img src="../assets/catbreed.png" alt="">
-        </div>
-        <div class="card-body">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi neque molestiae eius explicabo mollitia tempore reiciendis, vel, sequi.
-          </p>
-          <a href="#" class="btn">Read more</a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <img src="../assets/cat.jpg" alt="">
-        </div>
-        <div class="card-body">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi neque molestiae eius explicabo mollitia tempore reiciendis, vel, sequi.
-          </p>
-          <a href="#" class="btn">Read more</a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <img src="../assets/stray2.jpg" alt="">
-        </div>
-        <div class="card-body">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi neque molestiae eius explicabo mollitia tempore reiciendis, vel, sequi.
-          </p>
-          <a href="#" class="btn">Read more</a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <img src="../assets/stray1.webp" alt="">
-        </div>
-        <div class="card-body">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi neque molestiae eius explicabo mollitia tempore reiciendis, vel, sequi.
-          </p>
-          <a href="#" class="btn">Read more</a>
-        </div>
-      </div>
+    <div class="containertwo">
+      <h1>
+        Recently Uploaded Pets
+      </h1>
 
+
+      <div class="row  row-cols-1 row-cols-md-4 g-4">
+       <div class="col"  *ngFor="let lostFound of lostFounds$ | async">
+        <div class="card">
+          <div class="card-header">
+            <img src="{{$url}}{{lostFound.image}}" alt="">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{lostFound.name}}</h5>
+            <p>{{lostFound.gender}} | {{lostFound.location}}</p>
+            <h5 class="card-title text-uppercase">{{lostFound.status}} PET</h5>
+
+
+            <a href="#" class="btn" [routerLink]="['/lostnfound/',lostFound.status, lostFound.id]">Read more</a>
+          </div>
+        </div>
+       </div>
+
+
+
+
+      </div>
     </div>
+
   </div>
 
-</div>
+
+
+
+
+
+
+
+
 </main>
 
 
