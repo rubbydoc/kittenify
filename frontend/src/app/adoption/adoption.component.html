@@ -1,20 +1,222 @@
-<div class="container">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col" *ngFor="let cat of cats">
-      <div class="card h-50">
-        <img src="{{$url}}{{cat.image}}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{cat.name}}</h5>
-          <p class="card-text">{{cat.age}} | {{cat.breed}}</p>
-          <p class="card-text">{{cat.location}}</p>
-        </div>
-        <div class="card-footer">
-          <a href="#" class="btn btn-primary" routerLink="/adoption/{{cat.id}}">Read more</a>
 
-        </div>
+  <div class="logo">
+    <a routerLink="/home"
+      ><img class="logo" src="../assets/logo.png" alt=""
+    /></a>
+  </div>
+
+  <nav>
+    <div class="header">
+      <h1>CAT ADOPTION</h1>
+      <div class="buttons">
+
+        <a routerLink="/rehome-form"><label class="btn" for="chkBox1">Adopt a Cat</label></a>
+        <input type="checkbox" name="" id="chkBox1" />
+
+
+        <a routerLink="/home"><label class="btn" for="chkBox">Back to Home</label></a>
+        <input type="checkbox" name="" id="chkBox" />
+
       </div>
     </div>
+  </nav>
 
 
-  </div>
-</div>
+<section class="about" id="about">
+
+    <div class="image">
+        <img src="https://media.istockphoto.com/id/1358961504/photo/young-woman-and-her-cat.jpg?b=1&s=170667a&w=0&k=20&c=szQmag4ZnWzc62Rm2UojbSko9DU97SJ_gS_qbmOowVo=" alt="">
+    </div>
+
+    <div class="content">
+        <h3>Looking for <span>PAW🐾</span>Bestfriend</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum sint, dolore perspiciatis iure consequuntur eligendi quaerat vitae shaikh anas.</p>
+        <a href="#" class="btn">read more</a>
+    </div>
+</section>
+
+
+<!-- shop section starts  -->
+
+<section class="shop" id="shop">
+
+    <h1 class="heading"> Pets to  <span> Adopt </span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1597626133663-53df9633b799?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTN8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
+            </div>
+            <div class="content">
+                <h3>Cat 1</h3>
+                <div class="amount">perferendis deserunt amet expedita odio libero in.</div>
+                <a href="./adoption_form.html" class="btn"> Adopt now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1606491048802-8342506d6471?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
+            </div>
+            <div class="content">
+                <h3>Cat 1</h3>
+                <div class="amount">perferendis deserunt amet expedita odio libero in.</div>
+                                <a href="./adoption_form.html" class="btn"> Adopt now</a>
+
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1608032364895-0da67af36cd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
+            </div>
+            <div class="content">
+                <h3>Cat 1</h3>
+                <div class="amount">perferendis deserunt amet expedita odio libero in.</div>
+                                <a href="./adoption_form.html" class="btn"> Adopt now</a>
+
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1608848461950-0fe51dfc41cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
+            </div>
+            <div class="content">
+                <h3>Cat 1</h3>
+                <div class="amount">perferendis deserunt amet expedita odio libero in.</div>
+                                <a href="./adoption_form.html" class="btn"> Adopt now</a>
+
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1615796153287-98eacf0abb13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60" alt="">
+            </div>
+            <div class="content">
+                <h3>Cat 1</h3>
+                <div class="amount">perferendis deserunt amet expedita odio libero in.</div>
+                                <a href="./adoption_form.html" class="btn"> Adopt now</a>
+
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1571988840298-3b5301d5109b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60" alt="">
+            </div>
+            <div class="content">
+                <h3>Kitty</h3>
+                <div class="amount">perferendis deserunt amet expedita odio libero in.</div>
+                                <a href="./adoption_form.html" class="btn"> Adopt now</a>
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1608848461950-0fe51dfc41cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
+                                <a href="./adoption_form.html" class="btn"> Adopt now</a>
+
+            </div>
+            <div class="content">
+                <h3>Cat 1</h3>
+                <div class="amount">perferendis deserunt amet expedita odio libero in.</div>
+                                <a href="./adoption_form.html" class="btn"> Adopt now</a>
+
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1615796153287-98eacf0abb13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60" alt="">
+            </div>
+            <div class="content">
+                <h3>Cat 1</h3>
+                <div class="amount">perferendis deserunt amet expedita odio libero in.</div>
+                                <a href="./adoption_form.html" class="btn"> Adopt now</a>
+
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1571988840298-3b5301d5109b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60" alt="">
+            </div>
+            <div class="content">
+                <h3>Cat 1</h3>
+                <div class="amount">perferendis deserunt amet expedita odio libero in.</div>
+                                    <a href="./adoption_form.html" class="btn"> Adopt now</a>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+</section>
+
+<!-- shop section ends -->
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+    <h1 class="heading"> Learn more About <span>Pets</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-cat"></i>
+            <h3>cat boarding</h3>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-bath"></i>
+            <h3>spa & grooming</h3>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-drumstick-bite"></i>
+            <h3>healthy meal</h3>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-baseball-ball"></i>
+            <h3>activity exercise</h3>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-heartbeat"></i>
+            <h3>health care</h3>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services section ends -->
+<section class="contact" id="contact">
+
+    <div class="image">
+        <img src="https://images.unsplash.com/photo-1603104010974-de673b7c5674?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2F0JTIwbG92ZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+    </div>
+
+    <form action="">
+        <h3>contact us</h3>
+        <input type="text" placeholder="your name" class="box">
+        <input type="email" placeholder="your email" class="box">
+        <input type="tumber" placeholder="your number" class="box">
+        <textarea name="" placeholder="your message" id="" cols="30" rows="10"></textarea>
+        <input type="submit" value="send message" class="btn">
+    </form>
+
+</section>
+

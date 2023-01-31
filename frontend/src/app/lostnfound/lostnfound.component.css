@@ -48,7 +48,50 @@ nav label:hover{
   border-width: 5px;
   color:black;
 }
+nav .btn:hover{
+  background-color: #f89138;
+  border-style:solid;
+  border-color: #434242;
+  border-width: 5px;
+  color:black;
+}
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .8rem 2.8rem;
+  border-radius: 5rem;
+  border-top-left-radius: 0;
+  border: 0.2rem solid #000000;
+  cursor: pointer;
+  background: none;
+  color: #000000;
+  font-size: 1.7rem;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+}
 
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #FFFBAC;
+  z-index: -1;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+  -webkit-clip-path: circle(0% at 0% 5%);
+          clip-path: circle(0% at 0% 5%);
+}
+
+.btn:hover::before {
+  -webkit-clip-path: circle(100%);
+          clip-path: circle(100%);
+}
+
+/* ///////////////////////////////////Nav ends///////////////////////////////////////////// */
 .container{
   padding-top: 20px;
   display: inline;
@@ -335,7 +378,7 @@ right: 5px;
 #chkBox:checked + .mainContnt{
   visibility: visible;
   opacity: 1;
-} 
+}
 #chkBox1:checked + .mainContnt{
   visibility: visible;
   opacity: 1;
