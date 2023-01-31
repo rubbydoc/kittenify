@@ -10,7 +10,7 @@
     font-size: 20px;
 }
 body{
-    height: 150vh;
+    height: 190vh;
     background: linear-gradient(
         135deg,
         #FFD59E,
@@ -25,7 +25,7 @@ body{
     transform: translate(-50%,-50%);
     position: absolute;
     left: 50%;
-    top: 70%;
+    top: 90%;
     border-radius: 10px;
     box-shadow: 20px 30px 25px rgba(0,0,0,0.15);
 }
@@ -86,62 +86,8 @@ input:focus{
     color: #ffffff;
     border-radius: 10px;
     text-align: center;
-    margin-left: 200px;
+    margin-left: 100px;
 }
 .btn:hover{
   background: #905304;
-}
-
-#chkBox{
-  display: none;
-}
-.box{
-  /* display: grid;
-  grid-template-columns: repeat(2, 1fr); */
-  width: 700px;
-  height: 500px;
-  transform: translateY(-1000px);
-  transition: all 1s ease-in;
-  margin: auto;
-  background: #f3a540;
-  border-radius: 10px;
-  box-shadow: 20px 30px 25px rgba(0,0,0,0.15);
-
-}
-
-.bx2{
-  padding: 60px 50px 0 32px;
-}
-.mainContnt {
-  width: 400px;
-  height: 400px;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.7s;
-  position: fixed;
-  top: 450px;
-  left: 340px;
-  right:0;
-  bottom: 0;
-  z-index: 300;
-}
-.close-box .box-close{
-  position: fixed;
-  left: 50%;
-  bottom: 20px;
-  transform: translate(-50%, -50%);
-  margin: 0 auto;
-
-}
-#chkBox:checked + .mainContnt{
-  visibility: visible;
-  opacity: 1;
-}
-
-#chkBox:checked + .mainContnt .box{
-  transform: translateY(0);
 }
