@@ -1,3 +1,4 @@
+import { AdoptionDetailComponent } from './adoption-detail/adoption-detail.component';
 import { AdoptionComponent } from './adoption/adoption.component';
 import { CatBreedComponent } from './cat-breed/cat-breed.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
@@ -11,7 +12,6 @@ import { RehomeFormComponent } from './rehome-form/rehome-form.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RehomeComponent } from './rehome/rehome.component';
-import { AdoptCatComponent } from './adopt-cat/adopt-cat.component';
 
 
 
@@ -68,7 +68,7 @@ const routes: Routes = [
   },
   {
     path: 'adoption/:id',
-    component: AdoptCatComponent
+    component: AdoptionDetailComponent
   }
 
 ];

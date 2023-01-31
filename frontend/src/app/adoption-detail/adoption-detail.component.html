@@ -1,0 +1,7 @@
+<div *ngIf="cat$ | async as cat">
+  <h3>{{ cat.name }}</h3>
+  <p>Id: {{ cat.id }}</p>
+  <p>LOcation: {{ cat.location }}</p>
+
+  <label for="hero-name">Gender: {{cat.gender}}</label>
+</div>

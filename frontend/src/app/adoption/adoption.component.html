@@ -10,7 +10,7 @@
       <h1>CAT ADOPTION</h1>
       <div class="buttons">
 
-        <a routerLink="/rehome-form"><label class="btn" for="chkBox1">Adopt a Cat</label></a>
+        <a><label class="btn" for="chkBox1">Adopt a Cat</label></a>
         <input type="checkbox" name="" id="chkBox1" />
 
 
@@ -44,114 +44,31 @@
 
     <div class="box-container">
 
-        <div class="box">
+        <div class="box" *ngFor="let cat of cats$ | async">
             <div class="image">
-                <img src="https://images.unsplash.com/photo-1597626133663-53df9633b799?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTN8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
+                <img src="{{$url}}{{cat.image}}" alt="">
             </div>
             <div class="content">
-                <h3>Cat 1</h3>
-                <div class="amount">perferendis deserunt amet expedita odio libero in.</div>
-                <a href="./adoption_form.html" class="btn"> Adopt now</a>
+                <h3>{{cat.name}}</h3>
+                <div class="amount">{{cat.age}} | {{cat.breed}}</div>
+                <div class="amount">{{cat.location}}</div>
+                <a [routerLink]="['/adoption/', cat.id]" class="btn"> Adopt now</a>
             </div>
         </div>
 
-        <div class="box">
-            <div class="image">
-                <img src="https://images.unsplash.com/photo-1606491048802-8342506d6471?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
-            </div>
-            <div class="content">
-                <h3>Cat 1</h3>
-                <div class="amount">perferendis deserunt amet expedita odio libero in.</div>
-                                <a href="./adoption_form.html" class="btn"> Adopt now</a>
 
-            </div>
-        </div>
 
-        <div class="box">
-            <div class="image">
-                <img src="https://images.unsplash.com/photo-1608032364895-0da67af36cd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
-            </div>
-            <div class="content">
-                <h3>Cat 1</h3>
-                <div class="amount">perferendis deserunt amet expedita odio libero in.</div>
-                                <a href="./adoption_form.html" class="btn"> Adopt now</a>
 
-            </div>
-        </div>
 
-        <div class="box">
-            <div class="image">
-                <img src="https://images.unsplash.com/photo-1608848461950-0fe51dfc41cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
-            </div>
-            <div class="content">
-                <h3>Cat 1</h3>
-                <div class="amount">perferendis deserunt amet expedita odio libero in.</div>
-                                <a href="./adoption_form.html" class="btn"> Adopt now</a>
 
-            </div>
-        </div>
 
-        <div class="box">
-            <div class="image">
-                <img src="https://images.unsplash.com/photo-1615796153287-98eacf0abb13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60" alt="">
-            </div>
-            <div class="content">
-                <h3>Cat 1</h3>
-                <div class="amount">perferendis deserunt amet expedita odio libero in.</div>
-                                <a href="./adoption_form.html" class="btn"> Adopt now</a>
 
-            </div>
-        </div>
 
-        <div class="box">
-            <div class="image">
-                <img src="https://images.unsplash.com/photo-1571988840298-3b5301d5109b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60" alt="">
-            </div>
-            <div class="content">
-                <h3>Kitty</h3>
-                <div class="amount">perferendis deserunt amet expedita odio libero in.</div>
-                                <a href="./adoption_form.html" class="btn"> Adopt now</a>
 
-            </div>
-        </div>
-        <div class="box">
-            <div class="image">
-                <img src="https://images.unsplash.com/photo-1608848461950-0fe51dfc41cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
-                                <a href="./adoption_form.html" class="btn"> Adopt now</a>
 
-            </div>
-            <div class="content">
-                <h3>Cat 1</h3>
-                <div class="amount">perferendis deserunt amet expedita odio libero in.</div>
-                                <a href="./adoption_form.html" class="btn"> Adopt now</a>
 
-            </div>
-        </div>
 
-        <div class="box">
-            <div class="image">
-                <img src="https://images.unsplash.com/photo-1615796153287-98eacf0abb13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60" alt="">
-            </div>
-            <div class="content">
-                <h3>Cat 1</h3>
-                <div class="amount">perferendis deserunt amet expedita odio libero in.</div>
-                                <a href="./adoption_form.html" class="btn"> Adopt now</a>
 
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="https://images.unsplash.com/photo-1571988840298-3b5301d5109b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60" alt="">
-            </div>
-            <div class="content">
-                <h3>Cat 1</h3>
-                <div class="amount">perferendis deserunt amet expedita odio libero in.</div>
-                                    <a href="./adoption_form.html" class="btn"> Adopt now</a>
-
-                </div>
-
-            </div>
         </div>
 
 

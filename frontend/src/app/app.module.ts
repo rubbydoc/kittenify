@@ -20,6 +20,7 @@ import { CatvitaminsComponent } from './catvitamins/catvitamins.component';
 import { RehomeFormComponent } from './rehome-form/rehome-form.component';
 import { AdoptionComponent } from './adoption/adoption.component';
 import { AdoptCatComponent } from './adopt-cat/adopt-cat.component';
+import { AdoptionDetailComponent } from './adoption-detail/adoption-detail.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AdoptCatComponent } from './adopt-cat/adopt-cat.component';
     CatvitaminsComponent,
     RehomeFormComponent,
     AdoptionComponent,
-    AdoptCatComponent
+    AdoptCatComponent,
+    AdoptionDetailComponent
   ],
   imports: [
     BrowserModule,

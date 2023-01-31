@@ -10,7 +10,8 @@ class CatController extends Controller
 {
     public function index(){
 
-        return Cat::all();
+        $cats = Cat::get();
+        return response()->json($cats);
 
     }
 
