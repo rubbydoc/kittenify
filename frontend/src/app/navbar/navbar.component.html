@@ -73,8 +73,11 @@
             <label for="drop-1" class="toggle" aria-hidden="true"></label>
             <a class="names" href="#">PROFILE<img class="downbutton" src="../assets/down button.png"></a>
               <ul>
-                  <li><a routerLink="/login">Sign In</a></li>
-                  <li><a routerLink="/signup">Sign Up</a></li>
+                <li><a routerLink="" *ngIf="isSignedIn">Account</a></li>
+                  <li><a routerLink="/login" *ngIf="!isSignedIn">Login</a></li>
+                  <li><a routerLink="/register" *ngIf="!isSignedIn">Register</a></li>
+                  <li><a (click)="signOut()" *ngIf="isSignedIn">Log out</a></li>
+
               </ul>
           </li>
       </ul>

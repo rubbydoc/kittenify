@@ -34,12 +34,8 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'signup',
+    path: 'register',
     component: SignUpComponent
-  },
-  {
-    path: 'app',
-    component: AppComponent
   },
   {
     path: 'lostnfound',
