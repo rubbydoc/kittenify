@@ -1,3 +1,4 @@
+import { AuthGuard } from './Services/auth.guard';
 import { LostnfoundDetailComponent } from './lostnfound-detail/lostnfound-detail.component';
 import { AdoptionDetailComponent } from './adoption-detail/adoption-detail.component';
 import { AdoptionComponent } from './adoption/adoption.component';
@@ -76,7 +77,8 @@ const routes: Routes = [
   },
   {
     path: 'admin',
-    component: AdminComponent
+    component: AdminComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'admin-users',

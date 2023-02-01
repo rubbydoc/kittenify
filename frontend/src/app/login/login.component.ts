@@ -41,13 +41,12 @@ export class LoginComponent implements OnInit{
         this.authState.setAuthState(true);
         this.loginForm.reset();
         this.router.navigate(['home']);
-        console.log(this.authState.userAuthState);
       }
     );
   }
   // Handle response
   responseHandler(data:any) {
-    this.token.handleData(data.access_token);
+    this.token.handleData(data.auth_token);
   }
 
 
