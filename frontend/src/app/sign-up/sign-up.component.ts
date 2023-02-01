@@ -31,11 +31,11 @@ export class SignUpComponent implements OnInit {
   ngOnInit() {}
 
   registerUser() {
-    this.authService.signUp(this.signupForm.value).subscribe((res) => {
-      if (res.result) {
-        this.signupForm.reset();
+    this.authService.signUp(this.signupForm.value).subscribe(
+      (res:any)=>{
         this.router.navigate(['login']);
       }
-    });
+      
+    );
   }
 }
