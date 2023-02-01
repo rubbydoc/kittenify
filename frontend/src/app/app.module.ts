@@ -24,6 +24,7 @@ import { AdoptionDetailComponent } from './adoption-detail/adoption-detail.compo
 import { LostnfoundDetailComponent } from './lostnfound-detail/lostnfound-detail.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminUsersComponent } from './admin-users/admin-users.component';
+import { AdminProductsComponent } from './admin-products/admin-products.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AdminUsersComponent } from './admin-users/admin-users.component';
     AdoptionDetailComponent,
     LostnfoundDetailComponent,
     AdminComponent,
-    AdminUsersComponent
+    AdminUsersComponent,
+    AdminProductsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,50 @@
 
-<div class="col-div-8">
-    <div class="box-8">
+<!Doctype HTML>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+	
+	<div id="mySidenav" class="sidenav">
+	<p class="logo">
+        <a routerLink="/home"><img  src="../assets/logo.png" alt=""></a>
+        <!-- <img class="logo" src="../assets/logo.png" alt=""> -->
+    </p>
+        <a href="#" class="icon-a"><i routerLink="/admin" class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
+        <a href="#" class="icon-a active" routerLink="/admin-users"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Users</a>
+        <a href="#" class="icon-a" routerLink="/admin-products"><i class="fa fa-list icons"></i> &nbsp;&nbsp;Lost 'n Found</a>
+        <a href="#" class="icon-a"><i class="fa fa-shopping-bag icons"></i> &nbsp;&nbsp;Cat Products</a>
+        <a href="#" class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Rehome</a>
+        <a href="#" class="icon-a"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Log Out</a>
+</div>
+
+<div id="main">
+
+	<div class="head">
+		<div class="col-div-6">
+        <span style="font-size:70px;cursor:pointer; color: white;" class="nav"> USER LIST</span>
+    </div>
+	
+	<div class="col-div-6">
+        <div class="profile">
+            <img src="../assets/paw.png" class="pro-img" />
+            <p>Ruby <span>UI / UX DESIGNER</span></p>
+        </div>
+    </div>
+	<div class="clearfix"></div>
+</div>
+
+
+	<br/>
+
+	<div class="clearfix"></div>
+	<br/><br/>
     
-
-
+	<div class="col-div-8">
+    <div class="box-8">
         <table>
         <tr>
             <th>Name</th>
@@ -11,6 +52,7 @@
             <th>Phone Number</th>
             <th>Address</th>
             <th>Password</th>
+            <th>Role</th>
 
 
         </tr>
@@ -20,6 +62,7 @@
             <td>09xxxxxxxxxx</td>
             <td>Talamban</td>
             <td>1234567</td>
+            <td>Normal User</td>
 
         </tr>
         <tr>
@@ -28,6 +71,7 @@
             <td>09xxxxxxxxxx</td>
             <td>Talamban</td>
             <td>1234567</td>
+            <td>Normal User</td>
         </tr>
         <tr>
             <td>Ernst Handel</td>
@@ -35,6 +79,7 @@
             <td>09xxxxxxxxxx</td>
             <td>Talamban</td>
             <td>1234567</td>
+            <td>Normal User</td>
         </tr>
         <tr>
             <td>Island Trading</td>
@@ -42,6 +87,7 @@
             <td>09xxxxxxxxxx</td>
             <td>Talamban</td>
             <td>1234567</td>
+            <td>Normal User</td>
         </tr>
     
     
@@ -49,3 +95,19 @@
     </div>
 
 </div>
+
+
+		
+	<div class="clearfix"></div>
+</div>
+
+</body>
+
+
+</html>
+
+
+
+
+
+

@@ -15,6 +15,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RehomeComponent } from './rehome/rehome.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminUsersComponent } from './admin-users/admin-users.component';
+import { AdminProductsComponent } from './admin-products/admin-products.component';
 
 
 
@@ -84,6 +85,10 @@ const routes: Routes = [
   {
     path: 'admin-users',
     component: AdminUsersComponent
+  },
+  {
+    path: 'admin-products',
+    component: AdminProductsComponent
   }
 
 ];

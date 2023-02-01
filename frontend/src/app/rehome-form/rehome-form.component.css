@@ -25,7 +25,7 @@ body{
     transform: translate(-50%,-50%);
     position: absolute;
     left: 50%;
-    top: 90%;
+    top: 70%;
     border-radius: 10px;
     box-shadow: 20px 30px 25px rgba(0,0,0,0.15);
 }
@@ -86,8 +86,9 @@ input:focus{
     color: #ffffff;
     border-radius: 10px;
     text-align: center;
-    margin-left: 100px;
+    margin-left: 150px;
 }
 .btn:hover{
   background: #905304;
 }
+

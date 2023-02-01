@@ -36,10 +36,16 @@ body{
 .sidenav a {
   padding: 15px 8px 15px 32px;
   text-decoration: none;
+  font-family: 'Bree Serif', serif;
   font-size: 20px;
   color: black;
   display: block;
   transition: 0.3s;
+}
+.sidenav .active, .icon-a:hover{
+  color: black;
+  box-shadow: 5px 10px 20px #8c6007 inset;
+
 }
 .sidenav a:hover {
   color: #f1f1f1;
@@ -112,15 +118,16 @@ body{
     display: inline-block;
 }
 .box p span{
+  font-family: 'Bree Serif', serif;
 	font-size: 20px;
 	font-weight: 400;
-	color: #818181;
+	color: #1b1818;
 }
 .box-icon{
 	font-size: 40px!important;
     float: right;
     margin-top: 35px!important;
-    color: #818181;
+    color: #181515;
     padding-right: 10px;
     
 }
@@ -148,12 +155,12 @@ body{
 	float: right;
     background-color: #ddd;
     padding: 10px 20px;
-    font-size: 15px;
+    font-size: 20px;
 }
 .box-8, .box-4{
 	width: 95%;
 	background-color: #FBC252;
-	height: 330px;
+	height: 490px;
 	
 }
 .nav2{
@@ -164,7 +171,8 @@ body{
 	margin-left: 10px;
 }
 table {
-    font-family: 'Bree Serif', serif;
+  font-family: 'Bree Serif', serif;
+  font-size: 20px;
   border-collapse: collapse;
   width: 100%;
 }
