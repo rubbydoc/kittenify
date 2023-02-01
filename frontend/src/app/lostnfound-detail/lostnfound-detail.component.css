@@ -72,7 +72,7 @@ a {
 
 .tag-lost {
   color: #fff;
-  background-color: #df1d41;
+  background-color: #EC994B;
 }
 
 ul {
@@ -112,7 +112,7 @@ ul {
   font-family: Roboto,sans-serif;
 
   font-size: 2rem;
-  color: #df1d41;
+  color: #EC994B;
   display: inline-block;
 }
 
@@ -132,7 +132,7 @@ ul {
 
 .next-pet_box-img_title {
   padding: 1rem 0.5rem 0.5rem 0.5rem;
-  background-color: #df1d41!important;
+  background-color: #EC994B!important;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
   padding: 10px 30px 8px 30px;

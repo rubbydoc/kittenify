@@ -1,3 +1,4 @@
+import { UserProfileComponent } from './user-profile/user-profile.component';
 import { AdoptionListComponent } from './adoption-list/adoption-list.component';
 import { LostnfoundListComponent } from './lostnfound-list/lostnfound-list.component';
 import { AuthGuard } from './Services/auth.guard';
@@ -93,6 +94,10 @@ const routes: Routes = [
   {
     path: 'adoption-lists',
     component: AdoptionListComponent
+  },
+  {
+    path: 'profile',
+    component: UserProfileComponent
   }
 
 ];
