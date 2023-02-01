@@ -121,6 +121,10 @@ nav .btn:hover{
   margin-bottom: auto;
 }
 
+.card-body h5, p{
+  font-family: 'Fredoka One';
+}
+
 .intro p{
   font-size: 25px;
 }

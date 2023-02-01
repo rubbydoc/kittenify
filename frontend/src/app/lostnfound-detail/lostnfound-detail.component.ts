@@ -12,6 +12,7 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 export class LostnfoundDetailComponent {
   selectedId = 0;
   lostFound$!: Observable<LostFound>;
+  $url = 'http://localhost:8000/storage/lost_n_found/';
 
 
   constructor(

@@ -1,8 +1,67 @@
-<div *ngIf="lostFound$ | async as lostFound">
-  <h3>{{ lostFound.name }}</h3>
-  <p>Id: {{ lostFound.id }}</p>
-  <p>LOcation: {{ lostFound.location }}</p>
 
-  <label for="hero-name">Gender: {{lostFound.gender}}</label>
+
+<div class="row pb-5 justify-content-center mt-5">
+  <div class="col-lg-5 col-md-6 col-sm-12" *ngIf="lostFound$ | async as lostFound">
+  <a>
+
+
+     <div id="petdetails-img-wrap11" class="lost">
+
+               <div class="next-pet_box-img_title" style="border-radius:0px">
+                  <h2>
+                      <i class="fas fa-bullhorn"></i>
+                      Kittenify,
+                                                          <span> {{lostFound.location}}</span>
+                                                  </h2>
+              </div>
+
+
+
+
+
+          <div class="petdetails-img11 lost" id="image-to-copy" data-check="true" data-id="127054" style="position: relative;margin: 0; background-size: cover; background-position: center; background-repeat:no-repeat;  border-radius:0px">
+
+                      <img style="height: 600px; width: 600px; margin: 0 auto; display: flex; max-width: 100%; object-fit: contain;" src="{{$url}}{{lostFound.image}}" alt="">
+
+
+
+
+
+          </div>
+
+      </div>
+
+  </a>
+
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-12" *ngIf="lostFound$ | async as lostFound">
+      <div class="petdetails-lost">
+          <div class="tag-lost text-uppercase">{{lostFound.status}}</div>
+          <ul class="petdetails-lost_wrap">
+              <li class="petdetails-lost_item">
+                  <h3 style="display:inline"><span class="petdetails-lost_item-label">Name:</span> <span class="petdetails-lost_item-value ml-2">{{lostFound.name}}</span></h3>
+              </li>
+              <li class="petdetails-lost_item">
+                  <h3 style="display:inline"><span class="petdetails-lost_item-label mt-3">Area last seen:</span> <span class="petdetails-lost_item-value ml-2">{{lostFound.location}}</span></h3>
+              </li>
+
+              <li class="petdetails-lost_item">
+                  <h3 style="display:inline"><span class="petdetails-lost_item-label mt-3">Gender:</span> <span class="petdetails-lost_item-value ml-2">{{lostFound.gender}}</span></h3>
+              </li>
+
+                                                              <li class="petdetails-lost_item">
+                <h3 style="display:inline"><span class="petdetails-lost_item-label mt-3">Missing since:</span> <span class="petdetails-lost_item-value ml-2">{{lostFound.date}}</span></h3>
+              </li>
+                                      <li class="petdetails-lost_item">
+                  <h3 style="display:inline"><span class="petdetails-lost_item-label mt-3">Description:</span></h3>
+              </li>
+              <p class="petdetails-lost_des">{{lostFound.description}}</p>
+          </ul>
+      </div>
+  </div>
+ <div class="share-btns">
+  <a href="#" style="background: #ffc000" class="email-btn details-btn mb-sm-5 mb-xs-5"><i class="fas fa-envelope"></i> Contact Finder</a>
+
+ </div>
+
 </div>
-

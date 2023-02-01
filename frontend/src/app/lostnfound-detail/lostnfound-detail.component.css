@@ -1,0 +1,170 @@
+.pb-5, .py-5 {
+  padding-bottom: 3rem!important;
+}
+.justify-content-center {
+  justify-content: center!important;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+@media (min-width: 992px){
+.col-lg-5 {
+    -ms-flex: 0 0 41.666667%;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+}
+}
+
+.col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+div {
+  display: block;
+}
+
+a {
+  cursor: pointer!important;
+  text-decoration: none!important;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+@media (min-width: 992px){
+.col-lg-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+}
+.petdetails-found, .petdetails-lost {
+  margin-top: 0;
+}
+
+.petdetails-found, .petdetails-lost, .petdetails-reunited {
+  padding: 3rem 3rem 3rem 4rem;
+  background-color: #e4dfd6;
+  border-radius: 8px;
+}
+
+.petdetails-found .tag-found, .petdetails-lost .tag-lost, .petdetails-reunited .tag-reunited {
+  font-size: 2.4rem;
+  font-family: Roboto,sans-serif;
+
+  width: 25%;
+  text-align: center;
+  padding-top: 0.2rem;
+  border-radius: 6px;
+  margin-bottom: 3rem;
+}
+
+.tag-lost {
+  color: #fff;
+  background-color: #df1d41;
+}
+
+ul {
+  margin: 0!important;
+  padding: 0!important;
+  list-style: none!important;
+}
+
+.petdetails-lost_item {
+  margin-bottom: 0.5rem;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+ul {
+  list-style: none!important;
+}
+
+
+.h3, h3 {
+  font-size: 1.75rem;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5rem;
+  font-family: Roboto,sans-serif;
+
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+}
+
+.petdetails-lost_item-label {
+  font-family: Roboto,sans-serif;
+
+  font-size: 2rem;
+  color: #df1d41;
+  display: inline-block;
+}
+
+.petdetails-lost_item-value {
+  font-family: Roboto,sans-serif;
+  font-size: 2rem;
+  color: #3e3e3e;
+}
+
+.ml-2, .mx-2 {
+  margin-left: 0.5rem!important;
+}
+
+.next-pet_box-img_title {
+  padding: 10px 10px 6px;
+}
+
+.next-pet_box-img_title {
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
+  background-color: #df1d41!important;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  padding: 10px 30px 8px 30px;
+  position: relative;
+}
+
+.next-pet_box-img_title h2 {
+  margin-bottom: 0;
+}
+
+.next-pet_box-img_title h2 {
+  font-size: 2.4rem;
+  font-family: Roboto,sans-serif;
+
+  color: #fff;
+}
+.share-btns .email-btn {
+  width: 262.9px;
+}
+
+.share-btns .email-btn {
+  padding: 0.5rem 2rem;
+}
+
+
+.petdetails .share-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.share-btns .email-btn {
+  padding: 0.5rem 2rem;
+  margin-left: 900px;
+}
