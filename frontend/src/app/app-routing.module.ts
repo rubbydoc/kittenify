@@ -1,3 +1,5 @@
+import { AdoptionListComponent } from './adoption-list/adoption-list.component';
+import { LostnfoundListComponent } from './lostnfound-list/lostnfound-list.component';
 import { AuthGuard } from './Services/auth.guard';
 import { LostnfoundDetailComponent } from './lostnfound-detail/lostnfound-detail.component';
 import { AdoptionDetailComponent } from './adoption-detail/adoption-detail.component';
@@ -16,7 +18,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { RehomeComponent } from './rehome/rehome.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminUsersComponent } from './admin-users/admin-users.component';
-import { AdminProductsComponent } from './admin-products/admin-products.component';
 
 
 
@@ -81,12 +82,17 @@ const routes: Routes = [
     canActivate:[AuthGuard]
   },
   {
-    path: 'admin-users',
+    path: 'users',
     component: AdminUsersComponent
   },
+  
   {
-    path: 'admin-products',
-    component: AdminProductsComponent
+    path: 'lostnfound-lists',
+    component: LostnfoundListComponent
+  },
+  {
+    path: 'adoption-lists',
+    component: AdoptionListComponent
   }
 
 ];

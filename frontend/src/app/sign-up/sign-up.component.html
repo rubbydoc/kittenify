@@ -1,34 +1,53 @@
-
-
-
-<form class="login" [formGroup]="signupForm"
-(ngSubmit)="registerUser()">
-  <h2>Welcome<br>
-    Ailurophiles! 
-    <br>
-     ฅ^•ﻌ•^ฅ
- </h2>
+<form class="login" [formGroup]="signupForm" (ngSubmit)="registerUser()">
+  <h2>
+    Welcome<br />
+    Ailurophiles!
+    <br />
+    ฅ^•ﻌ•^ฅ
+  </h2>
   <p>Sign up Here</p>
-  <input type="text"
+  <input
+    type="text"
+    class="form-control"
+    formControlName="name"
+    placeholder="Enter name"
+    required
+  />
+  <input
+    type="email"
+    class="form-control"
+    formControlName="email"
+    placeholder="Enter email"
+    required
+  />
+  <input
+  type="text"
   class="form-control"
-  formControlName="name"
-  placeholder="Enter name"
-  required/>
-  <input type="email"
-  class="form-control"
-  formControlName="email"
-  placeholder="Enter email"
-  required />
-  <input type="password"
-  class="form-control"
-  formControlName="password"
-  placeholder="Password"
-  required/>
-  <input  type="password"
-  class="form-control"
-  formControlName="password_confirmation"
-  placeholder="Confirm Password"
-  required/>
+  formControlName="address"
+  placeholder="Enter address"
+  required
+/>
+<input
+type="email"
+class="form-control"
+formControlName="phone"
+placeholder="Enter phone number"
+required
+/>
+  <input
+    type="password"
+    class="form-control"
+    formControlName="password"
+    placeholder="Password"
+    required
+  />
+  <input
+    type="password"
+    class="form-control"
+    formControlName="password_confirmation"
+    placeholder="Confirm Password"
+    required
+  />
 
   <input type="submit" value="Sign Up" />
   <div class="links">

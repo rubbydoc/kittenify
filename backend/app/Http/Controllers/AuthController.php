@@ -12,9 +12,13 @@ use Validator;
 class AuthController extends Controller
 {
     public function __construct() {
-        $this->middleware('auth:api', ['except' => ['login', 'register']]);
+        $this->middleware('auth:api', ['except' => ['login', 'register', 'index']]);
     }
 
+
+    public function index(){
+        return User::all();
+    }
 
     public function login(Request $request){
         $request->validate([
@@ -41,6 +45,9 @@ class AuthController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6',
+            'address' => 'required|string',
+            'phone' => 'required|string',
+
             
         ]);
 
@@ -49,6 +56,8 @@ class AuthController extends Controller
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
+            'address' => $request->address,
+            'phone' => $request->phone,
             'password' => Hash::make($request->password),
             'role'=>$request->role
         ]);

@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+body{
+	margin:0;
+  padding:0;
+	background-color: #FBC252;
+	overflow: hidden;
+	font-family: system-ui;
+}
+.clearfix{
+	clear: both;
+}
+.logo img{
+	margin: 0px;
+	margin-left: 0px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px;
+    width:200px;
+    height:80px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #FBC252;
+  overflow: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+}
+.sidenav a {
+  padding: 15px 8px 15px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav .active, .icon-a:hover{
+  color: black;
+  box-shadow: 5px 10px 20px #8c6007 inset;
+
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+  background-color:#FBC252;
+}
+
+.sidenav{
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  font-family: 'Bree Serif', serif;
+}
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  margin-left: 300px;
+}
+.head{
+	padding:20px;
+}
+.col-div-6{
+	width: 50%;
+	float: left;
+  font-size:50px;
+}
+.col-div-6 span{
+	font-family: 'Bree Serif', serif;
+} 
+
+.profile{
+	display: inline-block;
+	float: right;
+	width: 160px;
+}
+.pro-img{
+	float: left;
+	width: 40px;
+	margin-top: 5px;
+}
+.profile p{
+	color: white;
+	font-weight: 500;
+	margin-left: 55px;
+	margin-top: 10px;
+	font-size: 16.5px;
+  font-family: 'Bree Serif', serif;
+}
+.profile p span{
+	font-weight: 400;
+    font-size: 13px;
+    display: block;
+    color: black;
+    font-family: 'Bree Serif', serif;
+}
+.col-div-3{
+	width: 25%;
+	float: left;
+}
+.col-div-8{
+	width: 100%;
+	float: left;
+    padding-bottom:380px;
+    
+}
+.col-div-4{
+	width: 30%;
+	float: left;
+}
+.content-box{
+	padding: 20px;
+    
+}
+.content-box p{
+	margin: 0px;
+    font-size: 30px;
+    color: black;
+    font-family: 'Bree Serif', serif;
+}
+.content-box p span{
+	float: right;
+    background-color: #ddd;
+    padding: 10px 20px;
+    font-size: 15px;
+}
+.box-8, .box-4{
+	width: 95%;
+	background-color: #FBC252;
+	height: 390px;
+	
+}
+.nav2{
+	display: none;
+}
+
+.box-8{
+  margin-top: 20px;
+	margin-left: 30px;
+}
+table {
+  font-family: 'Bree Serif', serif;
+  font-size: 20px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  text-align: left;
+  padding:15px;
+  color: black;
+  border-bottom: 1px solid #81818140;
+}
+@keyframes fill {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(126deg);
+  }
+}

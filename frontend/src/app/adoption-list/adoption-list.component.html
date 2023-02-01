@@ -1,0 +1,104 @@
+
+<!Doctype HTML>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+	
+	<div id="mySidenav" class="sidenav">
+	<p class="logo">
+        <a routerLink="/home"><img  src="../assets/logo.png" alt=""></a>
+        <!-- <img class="logo" src="../assets/logo.png" alt=""> -->
+    </p>
+        <a href="#" class="icon-a"  routerLink="/admin" ><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
+        <a href="#" class="icon-a " routerLink="/users"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Users</a>
+        <a href="#" class="icon-a " routerLink="/lostnfound-lists"><i class="fa fa-list icons"></i> &nbsp;&nbsp;Lost 'n Found</a>
+        <a href="#" class="icon-a" active><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Adoption</a>
+        <a (click)="logout()" class="icon-a"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Log Out</a>
+</div>
+
+<div id="main">
+
+	<div class="head">
+		<div class="col-div-6">
+        <span style="font-size:70px;cursor:pointer; color: white;" class="nav"> ADOPTION LIST</span>
+    </div>
+	
+	
+	<div class="clearfix"></div>
+</div>
+
+
+	<br/>
+
+	<div class="clearfix"></div>
+	<br/><br/>
+    
+	<div class="col-div-8">
+    <div class="box-8">
+        <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Color</th>
+            <th>Gender</th>
+            <th>Breed</th>
+            <th>Hair Length</th>
+            <th>Spayed?</th>
+            <th>Shots Up to Date?</th>
+            <th>Reason</th>
+            <th>Location</th>
+            <th>Story</th>
+            <th>Diet</th>
+            <th>Image</th>
+
+
+
+
+
+        </tr>
+        <tr *ngFor="let adopt of cats$ | async">
+            <td>{{adopt.name}}</td>
+            <td>{{adopt.age}}</td>
+            <td>{{adopt.color}}</td>
+            <td>{{adopt.gender}}</td>
+            <td>{{adopt.breed}}</td>
+            <td>{{adopt.hair_length}}</td>
+            <td>{{adopt.spayed}}</td>
+            <td>{{adopt.shots_upto_date}}</td>
+            <td>{{adopt.reason}}</td>
+            <td>{{adopt.location}}</td>
+            <td>{{adopt.story}}</td>
+            <td>{{adopt.diet}}</td>
+            <td><img src="{{$url}}{{adopt.image}}" alt="" width="100"></td>
+            
+
+        </tr>
+       
+       
+      
+    
+    
+    </table>
+    </div>
+
+</div>
+
+
+		
+	<div class="clearfix"></div>
+</div>
+
+</body>
+
+
+</html>
+
+
+
+
+
+
