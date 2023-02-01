@@ -24,13 +24,16 @@ export class SignUpComponent implements OnInit {
       name: [''],
       email: [''],
       password: [''],
-      password_confirmation:['']
+      password_confirmation:[''],
+      role:['Normal']
     });
   }
 
   ngOnInit() {}
 
   registerUser() {
+    // var formData: any = new FormData();
+    // formData.append('role', 'Normal');
     this.authService.signUp(this.signupForm.value).subscribe(
       (res:any)=>{
         this.router.navigate(['login']);
