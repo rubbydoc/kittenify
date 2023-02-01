@@ -1,7 +1,62 @@
-<div *ngIf="cat$ | async as cat">
-  <h3>{{ cat.name }}</h3>
-  <p>Id: {{ cat.id }}</p>
-  <p>LOcation: {{ cat.location }}</p>
 
-  <label for="hero-name">Gender: {{cat.gender}}</label>
+<div class="container">
+  <div class="box" *ngIf="cat$ | async as cat">
+    <div class="images">
+      <div class="img-holder active">
+        <img
+          src="{{$url}}{{cat.image}}"
+        />
+      </div>
+
+    </div>
+    <div class="basic-info">
+      <h1>
+        Hi I'm {{cat.name}}!
+      </h1>
+      <p>&nbsp;&nbsp;🟢 posted</p>
+      <div class="options">
+        <a>
+          <h2>Adoption fee: $50.00</h2>
+        </a>
+      </div>
+      <div class="options">
+        <a href="#">
+          <h2>Apply to Adopt</h2>
+        </a>
+      </div>
+    </div>
+
+    <div class="description">
+      <h2>Adoption process</h2>
+      <p>
+        1. Submit application <br />
+        2. Interview <br />
+        3. Meet the pet <br />
+        4. Pay fee <br />
+        5. Sign adoption contract
+      </p>
+      <h2>My Story</h2>
+      <p>
+      {{cat.story}}
+      </p>
+      <h2>Facts about me🐈</h2>
+      <h4>
+        ✔️ Breed <span><p>{{cat.breed}}</p></span>✔️Color <span><p> {{cat.color}}</p></span>✔️ Age <br> <span><p>{{cat.age}}</p></span>
+        ✔️Sex  <span><p>{{cat.gender}}</p></span> ✔️Hair Length <span><p>
+          {{cat.hair_length}}
+        </p></span>
+      </h4>
+
+
+      <h2>Why I need a home 🏠</h2>
+      <p>{{cat.reason}}</p>
+
+      <h2>My info</h2>
+      <p></p>
+      <h2>My Story</h2>
+      <p>{{cat.story}}</p>
+      <h2>My Diet</h2>
+      <p>{{cat.diet}}</p>
+    </div>
+  </div>
 </div>

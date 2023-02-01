@@ -46,7 +46,7 @@ import { AdminProductsComponent } from './admin-products/admin-products.componen
     LostnfoundDetailComponent,
     AdminComponent,
     AdminUsersComponent,
-    AdminProductsComponent
+    AdminProductsComponent,
   ],
   imports: [
     BrowserModule,

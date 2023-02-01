@@ -13,6 +13,8 @@ export class AdoptionDetailComponent {
   cats$: any;
   selectedId = 0;
   cat$!: Observable<Cat>;
+  $url: any = 'http://localhost:8000/storage/cats/';
+
 
   constructor(
     private route: ActivatedRoute,
@@ -25,5 +27,6 @@ export class AdoptionDetailComponent {
       switchMap((params: ParamMap) =>
         this.service.getCat(params.get('id')!))
     );
+
   }
 }
