@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -24,6 +24,7 @@ import { AdoptionDetailComponent } from './adoption-detail/adoption-detail.compo
 import { LostnfoundDetailComponent } from './lostnfound-detail/lostnfound-detail.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminUsersComponent } from './admin-users/admin-users.component';
+import { AuthInterceptor } from './Services/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,13 @@ import { AdminUsersComponent } from './admin-users/admin-users.component';
     ReactiveFormsModule
 
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

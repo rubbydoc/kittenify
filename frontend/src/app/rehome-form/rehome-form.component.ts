@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import Swal from 'sweetalert2';
-
+// import Swal from 'sweetalert2';
+declare var swal: any;
 @Component({
   selector: 'app-rehome-form',
   templateUrl: './rehome-form.component.html',
@@ -12,19 +12,19 @@ export class RehomeFormComponent {
 
   form!: FormGroup;
   files:any;
-    
+
   uploadImage(event){
     this.files = event.target.files[0];
   }
-  
+
   constructor(private http:HttpClient,public fb: FormBuilder
     ){
   }
-  
+
   ngOnInit():void{
     this.createForm();
   }
-  
+
   createForm(){
     this.form = this.fb.group({
       name: [''],
@@ -41,15 +41,15 @@ export class RehomeFormComponent {
       diet:[''],
       image:[null],
     });
-  
-  
-  
+
+
+
   }
-  
+
   get f(){
     return this.form.controls;
   }
-  
+
   onCreate(){
     var formData: any = new FormData();
     formData.append('name', this.form.get('name')?.value);
@@ -65,18 +65,18 @@ export class RehomeFormComponent {
     formData.append('story', this.form.get('story')?.value);
     formData.append('diet', this.form.get('diet')?.value);
     formData.append('image', this.files, this.files.name);
-  
+
     this.http
       .post('http://localhost:8000/api/cats', formData)
       .subscribe({
         next: (response) => console.log(response),
         error: (error) => console.log(error),
       });
-  
-  
+
+
   }
   successNotification() {
-    Swal.fire('Hi', 'We have been informed!', 'success');
+    swal.fire('Hi', 'We have been informed!', 'success');
   }
 
 }

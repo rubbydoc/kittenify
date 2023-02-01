@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { TokenService } from '../Services/token.service';
 import { Router } from '@angular/router';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { AuthService } from '../Services/auth.service';
 
 
 
@@ -10,37 +12,34 @@ import { Router } from '@angular/router';
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.css']
 })
-export class SignUpComponent {
-
-  public form = {
-    email: null,
-    name: null,
-    password: null,
-    password_confirmation: null
-  };
-  public error =  [];
-
-
-
-  constructor(private http:HttpClient,
-    private Token: TokenService,
-    private router: Router,
-    // private Auth: AuthService
-    ){}
+export class SignUpComponent implements OnInit {
+  registerForm: FormGroup;
+  errors: any = null;
+  constructor(
+    public router: Router,
+    public fb: FormBuilder,
+    public authService: AuthService
+  ) {
+    this.registerForm = this.fb.group({
+      name: [''],
+      email: [''],
+      password: [''],
+      password_confirmation: [''],
+    });
+  }
+  ngOnInit() {}
   onSubmit() {
-    console.log(this.error);
-    return this.http.post('http://localhost:8000/api/register',this.form).subscribe(
-      data => this.handleResponse(data),
-      error => this.handleError(error)
+    this.authService.register(this.registerForm.value).subscribe(
+      (result) => {
+        console.log(result);
+      },
+      (error) => {
+        this.errors = error.error;
+      },
+      () => {
+        this.registerForm.reset();
+        this.router.navigate(['login']);
+      }
     );
   }
-  handleResponse(data) {
-    this.Token.handle(data.access_token);
-    this.router.navigateByUrl('/home');
-  }
-
-  handleError(error) {
-    this.error = error.error.errors;
-  }
-
 }

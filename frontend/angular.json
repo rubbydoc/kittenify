@@ -26,8 +26,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css",
-              "node_modules/sweetalert2/src/sweetalert2.min.css"
+              "src/styles.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -35,7 +34,10 @@
               "src/assets/js/custom.js"
 
 
-            ]
+            ],
+            "allowedCommonJsDependencies": [
+              "lodash"
+           ]
           },
           "configurations": {
             "production": {

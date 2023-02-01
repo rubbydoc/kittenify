@@ -4,49 +4,42 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class TokenService {
-  private iss = {
+  private issuer = {
     login: 'http://localhost:8000/api/login',
-    signup: 'http://localhost:8000/api/signup'
+    register: 'http://localhost:8000/api/register',
   };
 
-  constructor() { }
-
-  handle(token) {
-    this.set(token);
+  constructor() {}
+  handleData(token: any) {
+    localStorage.setItem('auth_token', token);
   }
-
-  set(token) {
-    localStorage.setItem('token', token);
+  getToken() {
+    return localStorage.getItem('auth_token');
   }
-  get() {
-    return localStorage.getItem('token');
+  // Verify the token
+  isValidToken() {
+    const token = this.getToken();
+    if (token) {
+      const payload = this.payload(token);
+      if (payload) {
+        return Object.values(this.issuer).indexOf(payload.iss) > -1
+          ? true
+          : false;
+      }
+    } else {
+      return false;
+    }
   }
-
-  remove() {
-    localStorage.removeItem('token');
+  payload(token: any) {
+    const jwtPayload = token.split('.')[1];
+    return JSON.parse(atob(jwtPayload));
   }
-
-  // isValid() {
-  //   const token = this.get();
-  //   if (token) {
-  //     const payload = this.payload(token);
-  //     if (payload) {
-  //       return Object.values(this.iss).indexOf(payload.iss) > -1 ? true : false;
-  //     }
-  //   }
-  //   return false;
-  // }
-
-  // payload(token) {
-  //   const payload = token.split('.')[1];
-  //   return this.decode(payload);
-  // }
-
-  // decode(payload) {
-  //   return JSON.parse(atob(payload));
-  // }
-
-  // loggedIn() {
-  //   return this.isValid();
-  // }
+  // User state based on valid token
+  isLoggedIn() {
+    return this.isValidToken();
+  }
+  // Remove token
+  removeToken() {
+    localStorage.removeItem('auth_token');
+  }
 }
