@@ -11,22 +11,20 @@ import { TokenService } from '../Services/token.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  isSignedIn!: boolean;
+isSignedIn!: boolean;
   constructor(
-    private auth: AuthStateService,
+    public auth: AuthService,
     public router: Router,
     public token: TokenService
   ) {}
   ngOnInit() {
-    this.auth.userAuthState.subscribe((val) => {
-      this.isSignedIn = val;
-    });
+    
   }
   // Signout
-  signOut() {
-    this.auth.setAuthState(false);
-    this.token.removeToken();
-    this.router.navigate(['home']);
+
+
+  logout() {
+    this.auth.doLogout();
   }
 
 

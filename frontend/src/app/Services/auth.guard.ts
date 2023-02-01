@@ -13,15 +13,15 @@ export class AuthGuard implements CanActivate {
     public router: Router,
     private token: TokenService,
   ) { }
-
   canActivate(
     next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      if (this.token.isLoggedIn() !== true) {
-        window.alert("Access not allowed!");
-        this.router.navigate(['login'])
-      }
-      return true;
+    state: RouterStateSnapshot
+  ): Observable<boolean> | Promise<boolean> | boolean {
+    if (this.authService.isLoggedIn !== true) {
+      window.alert('Access not allowed!');
+      this.router.navigate(['login']);
+    }
+    return true;
   }
 
 }

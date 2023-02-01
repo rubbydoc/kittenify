@@ -24,7 +24,7 @@ import { AdoptionDetailComponent } from './adoption-detail/adoption-detail.compo
 import { LostnfoundDetailComponent } from './lostnfound-detail/lostnfound-detail.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminUsersComponent } from './admin-users/admin-users.component';
-import { AuthInterceptor } from './Services/auth.interceptor';
+import { AuthInterceptor } from './Services/authconfig.interceptor';
 import { AdminProductsComponent } from './admin-products/admin-products.component';
 @NgModule({
   declarations: [

@@ -13,33 +13,29 @@ import { AuthService } from '../Services/auth.service';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
-  registerForm: FormGroup;
-  errors: any = null;
+  signupForm: FormGroup;
+
   constructor(
-    public router: Router,
     public fb: FormBuilder,
-    public authService: AuthService
+    public authService: AuthService,
+    public router: Router
   ) {
-    this.registerForm = this.fb.group({
+    this.signupForm = this.fb.group({
       name: [''],
       email: [''],
       password: [''],
-      password_confirmation: [''],
+      password_confirmation:['']
     });
   }
+
   ngOnInit() {}
-  onSubmit() {
-    this.authService.register(this.registerForm.value).subscribe(
-      (result) => {
-        console.log(result);
-      },
-      (error) => {
-        this.errors = error.error;
-      },
-      () => {
-        this.registerForm.reset();
+
+  registerUser() {
+    this.authService.signUp(this.signupForm.value).subscribe((res) => {
+      if (res.result) {
+        this.signupForm.reset();
         this.router.navigate(['login']);
       }
-    );
+    });
   }
 }
