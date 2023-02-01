@@ -25,9 +25,9 @@ import { LostnfoundDetailComponent } from './lostnfound-detail/lostnfound-detail
 import { AdminComponent } from './admin/admin.component';
 import { AdminUsersComponent } from './admin-users/admin-users.component';
 import { AuthInterceptor } from './Services/authconfig.interceptor';
+import { AdoptionFormComponent } from './adoption-form/adoption-form.component';
 import { LostnfoundListComponent } from './lostnfound-list/lostnfound-list.component';
 import { AdoptionListComponent } from './adoption-list/adoption-list.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,10 +48,11 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     LostnfoundDetailComponent,
     AdminComponent,
     AdminUsersComponent,
+  
+    AdoptionFormComponent,
     LostnfoundListComponent,
     AdoptionListComponent,
-    UserProfileComponent,
-  ],
+],
   imports: [
     BrowserModule,
     AppRoutingModule,
