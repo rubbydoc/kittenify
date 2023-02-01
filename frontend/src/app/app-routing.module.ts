@@ -17,6 +17,7 @@ import { RehomeComponent } from './rehome/rehome.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminUsersComponent } from './admin-users/admin-users.component';
 import { AdminProductsComponent } from './admin-products/admin-products.component';
+import { AdoptionFormComponent} from './adoption-form/adoption-form.component'
 
 
 
@@ -87,6 +88,10 @@ const routes: Routes = [
   {
     path: 'admin-products',
     component: AdminProductsComponent
+  },
+  {
+    path: 'adoption-form',
+    component: AdoptionFormComponent
   }
 
 ];

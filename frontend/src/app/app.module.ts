@@ -26,6 +26,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminUsersComponent } from './admin-users/admin-users.component';
 import { AuthInterceptor } from './Services/authconfig.interceptor';
 import { AdminProductsComponent } from './admin-products/admin-products.component';
+import { AdoptionFormComponent } from './adoption-form/adoption-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +48,7 @@ import { AdminProductsComponent } from './admin-products/admin-products.componen
     AdminComponent,
     AdminUsersComponent,
     AdminProductsComponent,
+    AdoptionFormComponent,
   ],
   imports: [
     BrowserModule,
