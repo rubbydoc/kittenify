@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import Swal from 'sweetalert2';
-
+// import Swal from 'sweetalert2';
+declare var swal: any;
 @Component({
   selector: 'app-rehome-form',
   templateUrl: './rehome-form.component.html',
@@ -76,7 +76,7 @@ export class RehomeFormComponent {
 
   }
   successNotification() {
-    Swal.fire('Hi', 'We have been informed!', 'success');
+    swal.fire('Hi', 'We have been informed!', 'success');
   }
 
 }
